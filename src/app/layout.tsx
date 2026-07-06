@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Outfit } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { DEFAULT_METADATA } from "@/lib/metadata";
 import { generateOrganizationSchema, generateLocalBusinessSchema } from "@/lib/schema";
@@ -55,6 +56,7 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
       </body>
+      <GoogleAnalytics gaId="G-FMQHSWHSPZ" />
     </html>
   );
 }

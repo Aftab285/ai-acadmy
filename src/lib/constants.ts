@@ -32,13 +32,13 @@ export const NAV_LINKS = [
 
 // Trust Badges
 export const TRUST_BADGES = [
-  { icon: "🌐", label: "100% Online" },
-  { icon: "🎥", label: "Live Classes" },
-  { icon: "👨‍🏫", label: "Expert AI Instructor" },
-  { icon: "🛠️", label: "Project Based Learning" },
-  { icon: "🌱", label: "Beginner Friendly" },
-  { icon: "🏆", label: "Certificate of Completion" },
-  { icon: "🇵🇰", label: "Learn From Anywhere in Pakistan" },
+  { icon: "globe", label: "100% Online" },
+  { icon: "video", label: "Live Classes" },
+  { icon: "teacher", label: "Expert AI Instructor" },
+  { icon: "tools", label: "Project Based Learning" },
+  { icon: "seed", label: "Beginner Friendly" },
+  { icon: "certificate", label: "Certificate of Completion" },
+  { icon: "flag", label: "Learn From Anywhere in Pakistan" },
 ] as const;
 
 // Courses
@@ -84,7 +84,7 @@ export const COURSES: Course[] = [
       "Certificate of Completion",
       "Instructor Support via WhatsApp",
     ],
-    icon: "🤖",
+    icon: "robot",
     color: "from-blue-500 to-cyan-400",
   },
   {
@@ -114,7 +114,7 @@ export const COURSES: Course[] = [
       "Certificate of Completion",
       "Instructor Support via WhatsApp",
     ],
-    icon: "🧠",
+    icon: "brain",
     color: "from-purple-500 to-pink-400",
   },
   {
@@ -144,7 +144,7 @@ export const COURSES: Course[] = [
       "Certificate of Completion",
       "Instructor Support via WhatsApp",
     ],
-    icon: "⚡",
+    icon: "lightning",
     color: "from-orange-500 to-red-400",
   },
   {
@@ -174,7 +174,7 @@ export const COURSES: Course[] = [
       "Certificate of Completion",
       "Instructor Support via WhatsApp",
     ],
-    icon: "💬",
+    icon: "chat",
     color: "from-green-500 to-emerald-400",
   },
   {
@@ -204,7 +204,7 @@ export const COURSES: Course[] = [
       "Certificate of Completion",
       "Instructor Support via WhatsApp",
     ],
-    icon: "🎨",
+    icon: "palette",
     color: "from-violet-500 to-fuchsia-400",
   },
   {
@@ -234,7 +234,7 @@ export const COURSES: Course[] = [
       "Certificate of Completion",
       "Instructor Support via WhatsApp",
     ],
-    icon: "✍️",
+    icon: "terminal",
     color: "from-teal-500 to-cyan-400",
   },
   {
@@ -264,7 +264,7 @@ export const COURSES: Course[] = [
       "Certificate of Completion",
       "Instructor Support via WhatsApp",
     ],
-    icon: "🔧",
+    icon: "tools",
     color: "from-amber-500 to-yellow-400",
   },
 ];
@@ -340,42 +340,42 @@ export const STUDENT_JOURNEY = [
     title: "Contact on WhatsApp",
     description:
       "Reach out to us on WhatsApp to express your interest in learning AI.",
-    icon: "📱",
+    icon: "support",
   },
   {
     step: 2,
     title: "Free Consultation",
     description:
       "Get a free consultation to find the perfect course for your goals and level.",
-    icon: "💬",
+    icon: "chat",
   },
   {
     step: 3,
     title: "Enroll",
     description:
       "Choose your course and complete the simple enrollment process.",
-    icon: "✅",
+    icon: "check",
   },
   {
     step: 4,
     title: "Attend Live Classes",
     description:
       "Join interactive live online classes with our expert AI instructor.",
-    icon: "🎥",
+    icon: "video",
   },
   {
     step: 5,
     title: "Build AI Projects",
     description:
       "Apply your learning by building real-world AI projects with guidance.",
-    icon: "🛠️",
+    icon: "tools",
   },
   {
     step: 6,
     title: "Receive Certificate",
     description:
       "Complete your course and earn your Certificate of Completion.",
-    icon: "🏆",
+    icon: "certificate",
   },
 ] as const;
 
@@ -456,73 +456,73 @@ export const TESTIMONIALS: Testimonial[] = [
 // Why Choose Us USPs
 export const WHY_CHOOSE_US = [
   {
-    icon: "🌐",
+    icon: "globe",
     title: "100% Online Learning",
     description:
       "Learn from anywhere in Pakistan. All you need is a computer and internet connection.",
   },
   {
-    icon: "🎥",
+    icon: "video",
     title: "Live Interactive Classes",
     description:
       "Real-time classes where you can ask questions and interact with the instructor directly.",
   },
   {
-    icon: "👨‍🏫",
+    icon: "teacher",
     title: "Expert Instructor",
     description:
       "Learn from an experienced AI professional who makes complex concepts simple and practical.",
   },
   {
-    icon: "👥",
+    icon: "user",
     title: "Small Batch Learning",
     description:
       "Small class sizes ensure personalized attention and better learning outcomes for every student.",
   },
   {
-    icon: "🛠️",
+    icon: "tools",
     title: "Hands-on Projects",
     description:
       "Build real AI projects throughout the course. Learn by doing, not just watching.",
   },
   {
-    icon: "📚",
+    icon: "book",
     title: "Modern Curriculum",
     description:
       "Up-to-date curriculum covering the latest AI tools, techniques, and technologies.",
   },
   {
-    icon: "🌱",
+    icon: "seed",
     title: "Beginner Friendly",
     description:
       "No prior coding experience required. We start from the basics and build up gradually.",
   },
   {
-    icon: "💡",
+    icon: "target",
     title: "Practical Learning",
     description:
       "Focus on practical skills that students can apply immediately in real-world scenarios.",
   },
   {
-    icon: "💰",
+    icon: "wallet",
     title: "Affordable Fees",
     description:
       "Quality AI education at accessible prices. Investment in your future that won't break the bank.",
   },
   {
-    icon: "🏆",
+    icon: "certificate",
     title: "Certificate of Completion",
     description:
       "Receive a recognized certificate upon completing your course to showcase your AI skills.",
   },
   {
-    icon: "🏠",
+    icon: "laptop",
     title: "Learn from Home",
     description:
       "No commuting, no travel. Get premium AI education right from your home — safe and convenient.",
   },
   {
-    icon: "📱",
+    icon: "support",
     title: "WhatsApp Student Support",
     description:
       "Get help and support directly through WhatsApp. We are always just a message away.",

@@ -1,5 +1,6 @@
 import { WHY_CHOOSE_US } from '@/lib/constants';
 import SectionHeading from '@/components/ui/SectionHeading';
+import Icon from '@/components/ui/Icon';
 
 export default function WhyChooseUs() {
   return (
@@ -14,11 +15,11 @@ export default function WhyChooseUs() {
           {WHY_CHOOSE_US.map((usp, index) => (
             <article
               key={index}
-              className="card-hover group rounded-2xl bg-white p-6 shadow-md text-center transition-all"
+              className="card-hover group rounded-2xl bg-white p-6 shadow-md text-center transition-all border border-gray-100"
             >
               {/* Icon */}
-              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary/10 to-secondary/10 text-3xl group-hover:scale-110 transition-transform">
-                <span aria-hidden="true">{usp.icon}</span>
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 text-primary group-hover:scale-110 transition-transform">
+                <Icon name={usp.icon} size={28} color="primary" />
               </div>
 
               {/* Title */}

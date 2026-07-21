@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Course } from '@/lib/constants';
 import { WHATSAPP_LINK } from '@/lib/constants';
+import Icon from '@/components/ui/Icon';
 
 interface CourseCardProps {
   course: Course;
@@ -26,9 +27,9 @@ export default function CourseCard({ course }: CourseCardProps) {
       <div className="flex flex-1 flex-col p-6">
         {/* Icon & Level */}
         <div className="mb-4 flex items-start justify-between">
-          <span className="text-4xl" aria-hidden="true">
-            {course.icon}
-          </span>
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+            <Icon name={course.icon} size={26} color="primary" />
+          </div>
           <span
             className={`rounded-full px-3 py-1 text-xs font-semibold ${levelColors[course.level]}`}
           >

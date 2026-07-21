@@ -1,3 +1,5 @@
+import Icon from '@/components/ui/Icon';
+
 interface StepCardProps {
   step: number;
   title: string;
@@ -27,9 +29,9 @@ export default function StepCard({ step, title, description, icon, isLast = fals
       {/* Right column: content */}
       <div className={`pb-10 ${isLast ? '' : ''}`}>
         <div className="flex items-center gap-3 mb-2">
-          <span className="text-2xl" aria-hidden="true">
-            {icon}
-          </span>
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
+            <Icon name={icon} size={18} color="primary" />
+          </div>
           <h3 className="font-outfit text-lg font-bold text-dark">
             {title}
           </h3>

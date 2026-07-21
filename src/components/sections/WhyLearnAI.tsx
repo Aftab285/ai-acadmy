@@ -1,38 +1,39 @@
 import SectionHeading from '@/components/ui/SectionHeading';
+import Icon from '@/components/ui/Icon';
 
 const reasons = [
   {
-    icon: '🤖',
+    icon: 'robot',
     title: 'What is Artificial Intelligence?',
     paragraph:
       'Artificial Intelligence is the science of building smart machines that can think, learn, and solve problems like humans. From voice assistants to self-driving cars, AI is transforming every industry and reshaping how we live, work, and communicate.',
   },
   {
-    icon: '🌍',
+    icon: 'globe',
     title: 'Why AI Matters',
     paragraph:
       'AI is no longer a futuristic concept — it is here today, powering search engines, social media feeds, healthcare diagnostics, and financial systems. Understanding AI gives students a competitive edge in an increasingly technology-driven world.',
   },
   {
-    icon: '💼',
+    icon: 'target',
     title: 'Future Jobs & Careers',
     paragraph:
       'According to the World Economic Forum, AI will create 97 million new jobs by 2025. Learning AI now prepares students for careers in data science, machine learning engineering, AI research, robotics, and many more high-demand fields.',
   },
   {
-    icon: '🚀',
+    icon: 'rocket',
     title: 'The Early Advantage',
     paragraph:
       'Students who start learning AI early develop stronger analytical thinking, problem-solving abilities, and computational skills. The earlier you begin, the more time you have to build deep expertise and stand out in academics and careers.',
   },
   {
-    icon: '🎨',
+    icon: 'palette',
     title: 'Creativity & Problem Solving',
     paragraph:
       'AI is not just about coding — it is about creative thinking and solving real-world problems. Students learn to use AI tools for generating art, writing stories, building apps, and creating solutions that make a positive impact on society.',
   },
   {
-    icon: '👨‍👩‍👧‍👦',
+    icon: 'teacher',
     title: 'A Smart Investment for Parents',
     paragraph:
       'Investing in your child\'s AI education is investing in their future. AI skills are becoming as essential as reading and mathematics. Give your child the tools they need to succeed in the 21st century digital economy.',
@@ -55,8 +56,8 @@ export default function WhyLearnAI() {
               className="card-hover group rounded-2xl border border-gray-100 bg-white p-7 shadow-sm transition-all"
             >
               {/* Icon */}
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/5 text-3xl group-hover:bg-primary/10 transition-colors">
-                <span aria-hidden="true">{reason.icon}</span>
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
+                <Icon name={reason.icon} size={28} color="primary" />
               </div>
 
               {/* Title */}

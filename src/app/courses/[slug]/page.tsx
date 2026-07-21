@@ -8,6 +8,8 @@ import CTAButton from "@/components/ui/CTAButton";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 import CTASection from "@/components/sections/CTASection";
 
+import Icon from "@/components/ui/Icon";
+
 interface CoursePageProps {
   params: Promise<{ slug: string }>;
 }
@@ -97,7 +99,9 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
           />
           <div className="mt-8 max-w-4xl">
             <div className="flex items-center gap-4 mb-6">
-              <span className="text-5xl">{course.icon}</span>
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
+                <Icon name={course.icon} size={32} color="white" />
+              </div>
               <span
                 className={`px-4 py-1.5 rounded-full text-sm font-medium ${levelColors[course.level]}`}
               >

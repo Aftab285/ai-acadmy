@@ -4,6 +4,7 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { STUDENT_PROJECTS, WHATSAPP_LINK, DEMO_VIDEO_URL } from "@/lib/constants";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import CTAButton from "@/components/ui/CTAButton";
+import Icon from "@/components/ui/Icon";
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -84,23 +85,29 @@ export default function StudentProjectsPage() {
                 className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover"
               >
                 {/* Project Visual */}
-                <div className="h-48 bg-gradient-to-br from-primary/10 via-secondary/5 to-primary/10 flex items-center justify-center">
-                  <div className="text-center">
-                    <span className="text-5xl block mb-2">
-                      {project.category === "Chatbot"
-                        ? "💬"
-                        : project.category === "Computer Vision"
-                        ? "👁️"
-                        : project.category === "Education"
-                        ? "📚"
-                        : project.category === "Data Science"
-                        ? "📊"
-                        : project.category === "Creative AI"
-                        ? "🎨"
-                        : project.category === "Language"
-                        ? "🌐"
-                        : "🤖"}
-                    </span>
+                <div className="h-48 bg-gradient-to-br from-primary/10 via-primary/5 to-secondary/10 flex items-center justify-center">
+                  <div className="text-center flex flex-col items-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-md mb-2">
+                      <Icon
+                        name={
+                          project.category === "Chatbot"
+                            ? "chat"
+                            : project.category === "Computer Vision"
+                            ? "robot"
+                            : project.category === "Education"
+                            ? "book"
+                            : project.category === "Data Science"
+                            ? "brain"
+                            : project.category === "Creative AI"
+                            ? "palette"
+                            : project.category === "Language"
+                            ? "globe"
+                            : "robot"
+                        }
+                        size={32}
+                        color="primary"
+                      />
+                    </div>
                     <span className="text-sm text-muted font-medium">
                       {project.category}
                     </span>

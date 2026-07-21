@@ -4,6 +4,7 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { WHATSAPP_LINK } from "@/lib/constants";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import CTAButton from "@/components/ui/CTAButton";
+import Icon from "@/components/ui/Icon";
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = generatePageMetadata({
@@ -129,31 +130,33 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: "🎓",
+                icon: "certificate",
                 title: "Excellence",
                 desc: "We strive for excellence in everything we teach. Our curriculum is constantly updated to reflect the latest AI developments.",
               },
               {
-                icon: "🤝",
+                icon: "globe",
                 title: "Accessibility",
                 desc: "Quality AI education should be accessible to every student in Pakistan, regardless of their location or background.",
               },
               {
-                icon: "🛠️",
+                icon: "tools",
                 title: "Practical Learning",
                 desc: "We believe in learning by doing. Every concept is reinforced through hands-on projects and real-world applications.",
               },
               {
-                icon: "💡",
+                icon: "sparkles",
                 title: "Innovation",
                 desc: "We encourage our students to think creatively and innovatively, using AI as a tool to solve problems that matter.",
               },
             ].map((value) => (
               <div
                 key={value.title}
-                className="bg-surface rounded-2xl p-6 text-center card-hover"
+                className="bg-surface rounded-2xl p-6 text-center card-hover border border-gray-100"
               >
-                <span className="text-4xl block mb-4">{value.icon}</span>
+                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+                  <Icon name={value.icon} size={28} color="primary" />
+                </div>
                 <h3 className="font-outfit font-semibold text-lg mb-3">
                   {value.title}
                 </h3>
@@ -182,26 +185,30 @@ export default function AboutPage() {
                 step: "01",
                 title: "Learn Concepts",
                 desc: "Expert-led live sessions explaining AI concepts in simple, understandable language with real-world examples.",
-                icon: "📖",
+                icon: "book",
               },
               {
                 step: "02",
                 title: "Practice & Build",
                 desc: "Hands-on assignments and projects where students apply what they learned by building real AI applications.",
-                icon: "💻",
+                icon: "terminal",
               },
               {
                 step: "03",
                 title: "Review & Improve",
                 desc: "Personalized feedback, code reviews, and mentorship to help students improve and master their skills.",
-                icon: "🔍",
+                icon: "target",
               },
             ].map((item) => (
-              <div key={item.step} className="bg-white rounded-2xl p-8 shadow-sm">
-                <span className="text-primary font-outfit text-5xl font-bold opacity-20 block mb-4">
-                  {item.step}
-                </span>
-                <span className="text-4xl block mb-4">{item.icon}</span>
+              <div key={item.step} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-primary font-outfit text-4xl font-bold opacity-30">
+                    {item.step}
+                  </span>
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                    <Icon name={item.icon} size={24} color="primary" />
+                  </div>
+                </div>
                 <h3 className="font-outfit font-semibold text-xl mb-3">
                   {item.title}
                 </h3>

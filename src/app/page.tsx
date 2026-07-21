@@ -3,6 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata";
 import { generateFAQSchema } from "@/lib/schema";
 import { FAQ_DATA } from "@/lib/constants";
 import HeroSection from "@/components/sections/HeroSection";
+import YouTubeShorts from "@/components/sections/YouTubeShorts";
 import CoursesPreview from "@/components/sections/CoursesPreview";
 import WhyLearnAI from "@/components/sections/WhyLearnAI";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
@@ -50,6 +51,8 @@ export default function HomePage() {
       <HeroSection />
 
       <StatsCounter />
+
+      <YouTubeShorts />
 
       <section id="courses" className="py-20 bg-white">
         <CoursesPreview />

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema } from "@/lib/schema";
-import { WHATSAPP_LINK, WHATSAPP_DEMO_MESSAGE } from "@/lib/constants";
+import { DEMO_VIDEO_URL } from "@/lib/constants";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import CTAButton from "@/components/ui/CTAButton";
 import CTASection from "@/components/sections/CTASection";
@@ -123,8 +123,8 @@ export default function WhyLearnAIPage() {
             Artificial Intelligence is reshaping every industry worldwide. Discover why learning AI
             is the most important investment you can make in your future — or your child&apos;s future.
           </p>
-          <CTAButton variant="whatsapp" size="lg" href={WHATSAPP_LINK(WHATSAPP_DEMO_MESSAGE)}>
-            Start Learning AI Today
+          <CTAButton variant="whatsapp" size="lg" href={DEMO_VIDEO_URL} external>
+            Watch Free Demo
           </CTAButton>
         </div>
       </section>

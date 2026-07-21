@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema } from "@/lib/schema";
-import { STUDENT_PROJECTS, WHATSAPP_LINK, WHATSAPP_DEMO_MESSAGE } from "@/lib/constants";
+import { STUDENT_PROJECTS, WHATSAPP_LINK, DEMO_VIDEO_URL } from "@/lib/constants";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import CTAButton from "@/components/ui/CTAButton";
 import CTASection from "@/components/sections/CTASection";
@@ -154,8 +154,8 @@ export default function StudentProjectsPage() {
             you gain practical skills, not just theoretical knowledge.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <CTAButton variant="primary" size="lg" href={WHATSAPP_LINK(WHATSAPP_DEMO_MESSAGE)}>
-              Book Free Demo Class
+            <CTAButton variant="primary" size="lg" href={DEMO_VIDEO_URL} external>
+              Watch Free Demo
             </CTAButton>
             <CTAButton variant="whatsapp" size="lg" href={WHATSAPP_LINK()}>
               Chat on WhatsApp

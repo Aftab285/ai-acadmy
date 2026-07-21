@@ -1,4 +1,4 @@
-import { TRUST_BADGES, WHATSAPP_LINK, WHATSAPP_DEMO_MESSAGE, WHATSAPP_DEFAULT_MESSAGE } from '@/lib/constants';
+import { TRUST_BADGES, WHATSAPP_LINK, DEMO_VIDEO_URL, WHATSAPP_DEFAULT_MESSAGE } from '@/lib/constants';
 import TrustBadge from '@/components/ui/TrustBadge';
 import CTAButton from '@/components/ui/CTAButton';
 
@@ -54,11 +54,11 @@ export default function HeroSection() {
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up" style={{ animationDelay: '0.3s' }}>
             <CTAButton
               variant="outline"
-              href={WHATSAPP_LINK(WHATSAPP_DEMO_MESSAGE)}
+              href={DEMO_VIDEO_URL}
               size="lg"
               external
             >
-              Book Free Demo Class
+              Watch Free Demo
             </CTAButton>
             <CTAButton
               variant="whatsapp"

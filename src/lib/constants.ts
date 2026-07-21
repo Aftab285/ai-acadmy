@@ -15,6 +15,8 @@ export const WHATSAPP_DEFAULT_MESSAGE =
   "Hi! I'm interested in learning about AI courses at Pakistan AI Online Academy. Can you share more details?";
 export const WHATSAPP_DEMO_MESSAGE =
   "Hi! I'd like to book a free demo class at Pakistan AI Online Academy.";
+export const DEMO_VIDEO_URL =
+  "https://youtu.be/F-e7Kh6DHhY?si=1QM45EPFl87-88BN";
 
 // Navigation
 export const NAV_LINKS = [

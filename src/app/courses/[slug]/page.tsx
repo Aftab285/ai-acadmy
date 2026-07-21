@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { COURSES, WHATSAPP_LINK, FAQ_DATA } from "@/lib/constants";
+import { COURSES, WHATSAPP_LINK, FAQ_DATA, DEMO_VIDEO_URL } from "@/lib/constants";
 import { generateCourseSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import CTAButton from "@/components/ui/CTAButton";
@@ -117,8 +117,8 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
               <CTAButton variant="whatsapp" size="lg" href={WHATSAPP_LINK(`Hi! I'm interested in the ${course.shortTitle}. Can you share more details?`)}>
                 Enroll Now on WhatsApp
               </CTAButton>
-              <CTAButton variant="outline" size="lg" href={WHATSAPP_LINK(`Hi! I'd like to book a free demo class for the ${course.shortTitle}.`)}>
-                Book Free Demo
+              <CTAButton variant="outline" size="lg" href={DEMO_VIDEO_URL} external>
+                Watch Free Demo
               </CTAButton>
             </div>
           </div>
@@ -260,10 +260,11 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
                     <CTAButton
                       variant="outline"
                       size="md"
-                      href={WHATSAPP_LINK(`Hi! I'd like to book a free demo class for the ${course.shortTitle}.`)}
+                      href={DEMO_VIDEO_URL}
+                      external
                       className="w-full"
                     >
-                      Book Free Demo
+                      Watch Free Demo
                     </CTAButton>
                   </div>
                   <p className="text-center text-sm text-muted mt-4">

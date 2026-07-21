@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema } from "@/lib/schema";
-import { WHATSAPP_LINK, WHATSAPP_DEFAULT_MESSAGE, WHATSAPP_NUMBER } from "@/lib/constants";
+import { WHATSAPP_LINK, WHATSAPP_DEFAULT_MESSAGE, WHATSAPP_NUMBER, DEMO_VIDEO_URL } from "@/lib/constants";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import CTAButton from "@/components/ui/CTAButton";
 import FAQAccordion from "@/components/ui/FAQAccordion";
@@ -94,9 +94,10 @@ export default function ContactPage() {
               <CTAButton
                 variant="primary"
                 size="lg"
-                href={WHATSAPP_LINK("Hi! I'd like to book a free demo class.")}
+                href={DEMO_VIDEO_URL}
+                external
               >
-                Book Free Demo Class
+                Watch Free Demo
               </CTAButton>
             </div>
 

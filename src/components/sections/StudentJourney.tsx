@@ -1,4 +1,4 @@
-import { STUDENT_JOURNEY, WHATSAPP_LINK, WHATSAPP_DEMO_MESSAGE } from '@/lib/constants';
+import { STUDENT_JOURNEY, DEMO_VIDEO_URL } from '@/lib/constants';
 import SectionHeading from '@/components/ui/SectionHeading';
 import StepCard from '@/components/ui/StepCard';
 import CTAButton from '@/components/ui/CTAButton';
@@ -29,11 +29,11 @@ export default function StudentJourney() {
         <div className="mt-12 text-center">
           <CTAButton
             variant="whatsapp"
-            href={WHATSAPP_LINK(WHATSAPP_DEMO_MESSAGE)}
+            href={DEMO_VIDEO_URL}
             size="lg"
             external
           >
-            Start Your Journey
+            Watch Free Demo
           </CTAButton>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema } from "@/lib/schema";
-import { TESTIMONIALS, STATS, WHATSAPP_LINK, WHATSAPP_DEMO_MESSAGE } from "@/lib/constants";
+import { TESTIMONIALS, STATS, WHATSAPP_LINK, DEMO_VIDEO_URL } from "@/lib/constants";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import TestimonialCard from "@/components/ui/TestimonialCard";
 import CTAButton from "@/components/ui/CTAButton";
@@ -172,8 +172,8 @@ export default function SuccessStoriesPage() {
             their future with AI. Your journey begins with a simple WhatsApp message.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <CTAButton variant="primary" size="lg" href={WHATSAPP_LINK(WHATSAPP_DEMO_MESSAGE)}>
-              Book Free Demo Class
+            <CTAButton variant="primary" size="lg" href={DEMO_VIDEO_URL} external>
+              Watch Free Demo
             </CTAButton>
             <CTAButton variant="whatsapp" size="lg" href={WHATSAPP_LINK()}>
               Chat on WhatsApp

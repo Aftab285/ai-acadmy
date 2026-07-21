@@ -35,10 +35,9 @@ export default function YouTubeShorts() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          title="Explore AI Shorts & Insights"
-          subtitle="Watch quick artificial intelligence concepts, tech trends, and practical AI applications."
+          title="SHORTS"
           centered
-          className="[&_h2]:text-white [&_p]:text-blue-100"
+          className="[&_h2]:text-white"
         />
 
         {/* Video Shorts Grid */}

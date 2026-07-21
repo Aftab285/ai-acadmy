@@ -11,18 +11,18 @@ interface ShortItem {
 const SHORTS: ShortItem[] = [
   {
     id: "327gBQiCdBw",
-    title: "Inside Live AI Class — Student Project Demo",
-    badge: "Live Class Demo 🎥",
+    title: "Artificial Intelligence Concepts Explained",
+    badge: "AI Concepts 🤖",
   },
   {
     id: "uWv0dkED5cA",
-    title: "How Students Learn Artificial Intelligence",
-    badge: "Student Showcase 🚀",
+    title: "AI Applications & Future Tech Insights",
+    badge: "Future Tech 💡",
   },
   {
     id: "9--hN_Qluks",
-    title: "Parent & Student Experience at Pakistan AI Academy",
-    badge: "Real Results 🏆",
+    title: "Understanding Artificial Intelligence Trends",
+    badge: "AI Trends ⚡",
   },
 ];
 
@@ -35,8 +35,8 @@ export default function YouTubeShorts() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          title="Watch Our Live AI Class Shorts"
-          subtitle="Experience how Pakistani students learn Artificial Intelligence in interactive 100% live online sessions."
+          title="Explore AI Shorts & Insights"
+          subtitle="Watch quick artificial intelligence concepts, tech trends, and practical AI applications."
           centered
           className="[&_h2]:text-white [&_p]:text-blue-100"
         />
@@ -85,7 +85,7 @@ export default function YouTubeShorts() {
         {/* Call to action below videos */}
         <div className="mt-14 text-center">
           <p className="text-blue-100 text-lg mb-6 max-w-xl mx-auto">
-            Want your child to build real AI projects like this? Book a <strong>Free Live Demo Class</strong> on WhatsApp today!
+            Interested in mastering these AI concepts step-by-step? Book a <strong>Free Live Demo Class</strong> on WhatsApp today!
           </p>
           <CTAButton href={WHATSAPP_LINK(WHATSAPP_DEMO_MESSAGE)} external variant="whatsapp" size="lg">
             Book Free Demo Class on WhatsApp

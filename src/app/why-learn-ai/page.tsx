@@ -123,7 +123,7 @@ export default function WhyLearnAIPage() {
             Artificial Intelligence is reshaping every industry worldwide. Discover why learning AI
             is the most important investment you can make in your future — or your child&apos;s future.
           </p>
-          <CTAButton variant="whatsapp" size="lg" href={DEMO_VIDEO_URL} external>
+          <CTAButton variant="primary" size="lg" href={DEMO_VIDEO_URL} external>
             Watch Free Demo
           </CTAButton>
         </div>

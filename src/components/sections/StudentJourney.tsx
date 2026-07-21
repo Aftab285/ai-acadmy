@@ -28,7 +28,7 @@ export default function StudentJourney() {
         {/* CTA */}
         <div className="mt-12 text-center">
           <CTAButton
-            variant="whatsapp"
+            variant="primary"
             href={DEMO_VIDEO_URL}
             size="lg"
             external

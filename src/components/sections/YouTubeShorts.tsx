@@ -86,7 +86,7 @@ export default function YouTubeShorts() {
           <p className="text-blue-100 text-lg mb-6 max-w-xl mx-auto">
             Interested in mastering these AI concepts step-by-step? Book a <strong>Free Live Demo Class</strong> on WhatsApp today!
           </p>
-          <CTAButton href={DEMO_VIDEO_URL} external variant="whatsapp" size="lg">
+          <CTAButton href={DEMO_VIDEO_URL} external variant="primary" size="lg">
             Watch Free Demo
           </CTAButton>
         </div>

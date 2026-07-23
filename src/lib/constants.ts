@@ -54,6 +54,7 @@ export interface Course {
   features: string[];
   icon: string;
   color: string;
+  image?: string;
 }
 
 export const COURSES: Course[] = [
@@ -266,6 +267,45 @@ export const COURSES: Course[] = [
     ],
     icon: "tools",
     color: "from-amber-500 to-yellow-400",
+  },
+  {
+    slug: "python-programming-course",
+    title: "Python Programming Course — Learn Python from Scratch",
+    shortTitle: "Python Programming Course",
+    description:
+      "Our Python Programming Course is designed for complete beginners, students, professionals, freelancers, and anyone who wants to learn programming from the ground up. The course starts with the basics and gradually moves to more advanced concepts through live classes, practical exercises, coding challenges, and real-world projects. No prior programming experience is required.",
+    level: "Beginner",
+    duration: "2 Months",
+    ageGroup: "Ages 10+",
+    topics: [
+      "Python Fundamentals",
+      "Variables & Data Types",
+      "Input & Output",
+      "Operators",
+      "Conditional Statements (if/else)",
+      "Loops",
+      "Functions",
+      "Lists, Tuples & Dictionaries",
+      "File Handling",
+      "Object-Oriented Programming (OOP)",
+      "Error Handling",
+      "Modules & Packages",
+      "Real-World Projects",
+      "Problem Solving & Programming Logic",
+    ],
+    features: [
+      "Live Online Classes",
+      "Beginner Friendly",
+      "Hands-on Coding Practice",
+      "Real Projects",
+      "Small Batches",
+      "Individual Attention",
+      "Assignment & Practice Exercises",
+      "Certificate Upon Completion",
+    ],
+    icon: "terminal",
+    color: "from-blue-600 to-cyan-500",
+    image: "/images/python-course.png",
   },
 ];
 

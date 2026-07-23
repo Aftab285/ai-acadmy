@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import { COURSES, WHATSAPP_LINK, FAQ_DATA, DEMO_VIDEO_URL } from "@/lib/constants";
 import { generateCourseSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
@@ -135,6 +136,19 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2">
+              {/* Course Illustration */}
+              {course.image && (
+                <div className="relative h-64 md:h-96 w-full mb-12 rounded-2xl overflow-hidden shadow-md border border-gray-100">
+                  <Image
+                    src={course.image}
+                    alt={course.title}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              )}
+
               {/* Course Info Bar */}
               <div className="flex flex-wrap gap-6 mb-12 p-6 bg-surface rounded-2xl">
                 <div className="flex items-center gap-2">
@@ -243,8 +257,10 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
               <div className="sticky top-24 space-y-6">
                 {/* Enrollment Card */}
                 <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
-                  <div className="text-center mb-6">
-                    <span className="text-5xl block mb-4">{course.icon}</span>
+                  <div className="text-center mb-6 flex flex-col items-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-primary mb-4">
+                      <Icon name={course.icon} size={32} color="primary" />
+                    </div>
                     <h3 className="font-outfit text-xl font-bold mb-2">
                       {course.shortTitle}
                     </h3>

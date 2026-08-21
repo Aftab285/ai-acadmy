@@ -8,6 +8,7 @@ import {
   WHATSAPP_LINK,
   WHATSAPP_DEFAULT_MESSAGE,
 } from '@/lib/constants';
+import Icon from '@/components/ui/Icon';
 
 export default function Footer() {
   return (
@@ -101,9 +102,9 @@ export default function Footer() {
                 <li key={course.slug}>
                   <Link
                     href={`/courses/${course.slug}`}
-                    className="inline-flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white hover:translate-x-1 transform duration-200"
+                    className="inline-flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white hover:translate-x-1 transform duration-200 group"
                   >
-                    <span aria-hidden="true">{course.icon}</span>
+                    <Icon name={course.icon} size={14} color="primary" className="text-gray-400 group-hover:text-primary-light" />
                     {course.shortTitle}
                   </Link>
                 </li>
@@ -116,9 +117,23 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
-          <p className="text-xs text-gray-500">
-            © 2024–2025 {SITE_NAME}. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs text-gray-500 text-center sm:text-left">
+            <p>
+              © 2024–2026 {SITE_NAME}. All rights reserved.
+            </p>
+            <span className="hidden sm:inline text-gray-700">|</span>
+            <p className="hover:text-white transition-colors duration-200">
+              Designed & Developed by{" "}
+              <a
+                href="https://aiwebsiteservice.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-primary-light hover:text-white underline transition-colors"
+              >
+                AIWEBSITESERVICE
+              </a>
+            </p>
+          </div>
           <div className="flex items-center gap-6 text-xs text-gray-500">
             <Link href="/privacy-policy" className="transition-colors hover:text-white">
               Privacy Policy

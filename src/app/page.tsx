@@ -9,6 +9,7 @@ import WhyLearnAI from "@/components/sections/WhyLearnAI";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import StudentJourney from "@/components/sections/StudentJourney";
 import Testimonials from "@/components/sections/Testimonials";
+import StudentCertificates from "@/components/sections/StudentCertificates";
 import BlogPreview from "@/components/sections/BlogPreview";
 import CTASection from "@/components/sections/CTASection";
 import FAQAccordion from "@/components/ui/FAQAccordion";
@@ -73,6 +74,8 @@ export default function HomePage() {
       <section id="testimonials" className="py-20 bg-white">
         <Testimonials />
       </section>
+
+      <StudentCertificates />
 
       <section id="blog" className="py-20 section-gradient-light">
         <BlogPreview />

@@ -53,6 +53,8 @@ export default function HomePage() {
 
       <StatsCounter />
 
+      <StudentCertificates />
+
       <YouTubeShorts />
 
       <section id="courses" className="py-20 bg-white">
@@ -74,8 +76,6 @@ export default function HomePage() {
       <section id="testimonials" className="py-20 bg-white">
         <Testimonials />
       </section>
-
-      <StudentCertificates />
 
       <section id="blog" className="py-20 section-gradient-light">
         <BlogPreview />

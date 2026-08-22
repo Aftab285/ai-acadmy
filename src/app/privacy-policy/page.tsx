@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema } from "@/lib/schema";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { WHATSAPP_NUMBER, WHATSAPP_LINK } from "@/lib/constants";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Privacy Policy — Pakistan AI Online Academy",
@@ -57,8 +58,8 @@ export default function PrivacyPolicyPage() {
             <p>
               If you have additional questions or require more information about our Privacy Policy, do not hesitate
               to contact us through our primary contact method on WhatsApp at{" "}
-              <a href="https://wa.me/923406187831" className="text-secondary font-semibold hover:underline">
-                03406187831
+              <a href={WHATSAPP_LINK()} className="text-secondary font-semibold hover:underline">
+                {WHATSAPP_NUMBER}
               </a>
               .
             </p>

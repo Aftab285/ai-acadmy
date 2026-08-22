@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema } from "@/lib/schema";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
+import { WHATSAPP_NUMBER, WHATSAPP_INTERNATIONAL } from "@/lib/constants";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Terms of Service — Pakistan AI Online Academy",
@@ -99,7 +100,7 @@ export default function TermsPage() {
               </li>
               <li>
                 <strong>Payment Methods:</strong> Payments are processed online (JazzCash, EasyPaisa, or direct Bank
-                Transfers) as coordinated via our official WhatsApp support at 03406187831.
+                Transfers) as coordinated via our official WhatsApp support at {WHATSAPP_NUMBER}.
               </li>
               <li>
                 <strong>Refund Policy:</strong> Since we offer a <strong>Free Demo Class</strong> for you/your child to
@@ -143,7 +144,8 @@ export default function TermsPage() {
               fees, or terms clarification, please contact us at:
             </p>
             <p className="font-semibold text-primary">
-              WhatsApp: 03406187831 (International: +923406187831)
+              WhatsApp: {WHATSAPP_NUMBER} <br />
+              (International: {WHATSAPP_INTERNATIONAL})
             </p>
           </div>
         </div>

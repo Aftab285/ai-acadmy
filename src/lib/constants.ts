@@ -7,10 +7,19 @@ export const SITE_DESCRIPTION =
 export const SITE_TAGLINE = "Leading the AI Revolution";
 
 // WhatsApp
-export const WHATSAPP_NUMBER = "03406187831";
-export const WHATSAPP_INTERNATIONAL = "+923406187831";
-export const WHATSAPP_LINK = (message?: string) =>
+export const WHATSAPP_NUMBER_1 = "03406187831";
+export const WHATSAPP_INTERNATIONAL_1 = "+923406187831";
+export const WHATSAPP_LINK_1 = (message?: string) =>
   `https://wa.me/923406187831${message ? `?text=${encodeURIComponent(message)}` : ""}`;
+
+export const WHATSAPP_NUMBER_2 = "03496354307";
+export const WHATSAPP_INTERNATIONAL_2 = "+923496354307";
+export const WHATSAPP_LINK_2 = (message?: string) =>
+  `https://wa.me/923496354307${message ? `?text=${encodeURIComponent(message)}` : ""}`;
+
+export const WHATSAPP_NUMBER = "03406187831 / 03496354307";
+export const WHATSAPP_INTERNATIONAL = "+923406187831 / +923496354307";
+export const WHATSAPP_LINK = WHATSAPP_LINK_1;
 export const WHATSAPP_DEFAULT_MESSAGE =
   "Hi! I'm interested in learning about AI courses at Pakistan AI Online Academy. Can you share more details?";
 export const WHATSAPP_DEMO_MESSAGE =
@@ -55,6 +64,17 @@ export interface Course {
   icon: string;
   color: string;
   image?: string;
+  syllabus?: {
+    partTitle: string;
+    classes: {
+      number: string | number;
+      title: string;
+      bullets: string[];
+    }[];
+  }[];
+  learningOutcomes?: string[];
+  learningPath?: string[];
+  projects?: string[];
 }
 
 export const COURSES: Course[] = [
@@ -306,6 +326,109 @@ export const COURSES: Course[] = [
     icon: "terminal",
     color: "from-blue-600 to-cyan-500",
     image: "/images/python-course.png",
+  },
+  {
+    slug: "python-ai-development-course",
+    title: "Python & AI Development — Build Real AI Apps from Scratch",
+    shortTitle: "Python & AI Development",
+    description:
+      "This course is designed to build a strong foundation in Python programming and gradually move students toward practical Python development and AI-powered applications. Students will learn core Python concepts, apply them through hands-on projects, integrate AI capabilities, and create simple web interfaces using Streamlit.",
+    level: "Beginner",
+    duration: "2 Months",
+    ageGroup: "Ages 12+",
+    topics: [
+      "Python Fundamentals",
+      "Control Flow & Decision Making",
+      "Functions & Reusable Code",
+      "Data Structures & Dictionaries",
+      "File Input/Output & Modules",
+      "Object-Oriented Programming (OOP)",
+      "Pandas & Basic Data Analysis",
+      "Rule-Based & AI-Powered Chatbots",
+      "Streamlit Web Interfaces",
+      "AI + Streamlit Mini Projects",
+    ],
+    features: [
+      "Live Online Classes (30 Classes)",
+      "Beginner to Project Level",
+      "Hands-on Coding Practice",
+      "8 Practical Projects",
+      "Small Batches & Individual Attention",
+      "Assignment & Practice Exercises",
+      "AI APIs & Integration",
+      "Certificate Upon Completion",
+    ],
+    icon: "sparkles",
+    color: "from-blue-600 to-emerald-500",
+    image: "/images/python-ai-course.png",
+    learningOutcomes: [
+      "Write Python programs confidently and use core programming concepts",
+      "Work with basic structured data and utilize the Pandas library",
+      "Build interactive desktop applications using functions, input, loops, and conditions",
+      "Connect Python scripts with state-of-the-art AI model APIs (like Gemini/OpenAI)",
+      "Create clean, functional web-based user interfaces using Streamlit",
+      "Develop fully-functional AI-powered web applications from scratch",
+    ],
+    learningPath: [
+      "Python Fundamentals",
+      "Problem Solving",
+      "Practical Projects",
+      "AI Integration",
+      "Streamlit",
+      "AI-Powered Applications",
+    ],
+    projects: [
+      "Python Calculator",
+      "To-Do List Application",
+      "Number Guessing Game",
+      "Quiz Application",
+      "Basic Rule-Based Chatbot",
+      "AI-Powered Chatbot",
+      "Streamlit Web Application",
+      "AI + Streamlit Mini Project",
+    ],
+    syllabus: [
+      {
+        partTitle: "Part 1: Python Fundamentals (Classes 1–20)",
+        classes: [
+          { number: 1, title: "Introduction to Python", bullets: ["What is Python and why it is widely used", "Python applications and development environments", "Writing and running the first Python program", "print() function"] },
+          { number: 2, title: "Variables & Data Types", bullets: ["Variables and naming conventions", "Strings, integers, floats and booleans", "Basic type conversion", "Practical exercises"] },
+          { number: 3, title: "Input & Output", bullets: ["Taking user input with input()", "Formatting output", "Interactive Python programs", "Practical exercises"] },
+          { number: 4, title: "Operators", bullets: ["Arithmetic, comparison and logical operators", "Assignment operators", "Combining operators in programs", "Practical examples"] },
+          { number: 5, title: "Conditional Statements", bullets: ["if, elif and else", "Nested conditions", "Decision-making programs", "Practical exercises"] },
+          { number: 6, title: "Loops", bullets: ["for and while loops", "Loop control", "Repeating tasks efficiently", "Practical exercises"] },
+          { number: 7, title: "Lists", bullets: ["Creating and accessing lists", "Adding, removing and updating elements", "List methods", "Practical exercises"] },
+          { number: 8, title: "Tuples & Sets", bullets: ["Tuples and sets", "Key differences from lists", "When to use each data structure", "Practical examples"] },
+          { number: 9, title: "Dictionaries", bullets: ["Keys and values", "Creating and updating dictionaries", "Accessing dictionary data", "Practical exercises"] },
+          { number: 10, title: "Strings in Python", bullets: ["Indexing and slicing", "Common string methods", "String formatting", "Text-processing exercises"] },
+          { number: 11, title: "Functions", bullets: ["Creating functions", "Parameters and arguments", "Return values", "Reusable code"] },
+          { number: 12, title: "Function Concepts", bullets: ["Default parameters", "Multiple parameters", "Variable scope", "Function-based programs"] },
+          { number: 13, title: "Error Handling", bullets: ["Common Python errors", "try, except and finally", "Handling invalid input", "Writing more reliable programs"] },
+          { number: 14, title: "File Handling", bullets: ["Reading and writing text files", "Updating file content", "Practical file-based program", "Basic data storage"] },
+          { number: 15, title: "Modules", bullets: ["What are modules?", "Importing built-in modules", "Using external modules", "Creating reusable Python files"] },
+          { number: 16, title: "Python Libraries", bullets: ["What are libraries and packages?", "Installing packages", "Using useful Python libraries", "Practical examples"] },
+          { number: 17, title: "Object-Oriented Programming Basics", bullets: ["Classes and objects", "Attributes and methods", "Basic OOP structure", "Simple practical example"] },
+          { number: 18, title: "Working with Data", bullets: ["Introduction to structured data", "CSV files", "Basic data processing", "Introduction to Pandas"] },
+          { number: 19, title: "Python & AI Introduction", bullets: ["What is AI?", "How Python is used in AI", "Introduction to AI tools and APIs", "Creating a basic AI-powered Python program"] },
+          { number: 20, title: "Python Fundamentals Practice", bullets: ["Complete revision", "Problem-solving exercises", "Coding challenges", "Mini practical tasks"] }
+        ]
+      },
+      {
+        partTitle: "Part 2: Python Development & AI Projects (Classes 21–30)",
+        classes: [
+          { number: 21, title: "Project 1: Python Calculator", bullets: ["Build a functional calculator", "Use functions, input, conditions and operators", "Test and improve the application"] },
+          { number: 22, title: "Project 2: To-Do List App", bullets: ["Add, view and remove tasks", "Apply lists and functions", "Store and manage task data"] },
+          { number: 23, title: "Project 3: Number Guessing Game", bullets: ["Use random numbers", "Apply loops and conditions", "Create interactive game logic"] },
+          { number: 24, title: "Project 4: Quiz Application", bullets: ["Create questions and answers", "Check responses", "Calculate scores", "Build an interactive quiz"] },
+          { number: 25, title: "Project 5: Basic Python Chatbot", bullets: ["Understand chatbot logic", "Process user input", "Create rule-based responses", "Build a simple chatbot"] },
+          { number: 26, title: "AI-Powered Chatbot", bullets: ["Introduction to AI APIs", "Connect Python with an AI model", "Send prompts and receive responses", "Build a simple AI chatbot"] },
+          { number: 27, title: "Introduction to Streamlit", bullets: ["What is Streamlit?", "Create a web interface using Python", "Use text, buttons and input fields", "Run a Streamlit application"] },
+          { number: 28, title: "Building a Streamlit Application", bullets: ["Create a complete interface", "Use input fields, buttons and dropdowns", "Display results", "Connect Python logic with the interface"] },
+          { number: 29, title: "AI + Streamlit Mini Project", bullets: ["Combine Python, AI and Streamlit", "Build an AI-powered application", "Create the user interface", "Connect and test AI functionality"] },
+          { number: 30, title: "Final Project & Course Showcase", bullets: ["Develop and test the final project", "Debug and improve the application", "Present the completed project", "Review and discuss next learning steps"] }
+        ]
+      }
+    ]
   },
 ];
 

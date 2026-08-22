@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema } from "@/lib/schema";
-import { WHATSAPP_LINK, WHATSAPP_DEFAULT_MESSAGE, WHATSAPP_NUMBER, DEMO_VIDEO_URL } from "@/lib/constants";
+import { WHATSAPP_LINK_1, WHATSAPP_LINK_2, WHATSAPP_DEFAULT_MESSAGE, DEMO_VIDEO_URL } from "@/lib/constants";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import CTAButton from "@/components/ui/CTAButton";
 import FAQAccordion from "@/components/ui/FAQAccordion";
@@ -72,25 +72,39 @@ export default function ContactPage() {
               to start a conversation with us instantly.
             </p>
 
-            {/* WhatsApp Number */}
-            <div className="mb-8">
-              <a
-                href={`tel:${WHATSAPP_NUMBER}`}
-                className="font-outfit text-4xl md:text-5xl font-bold text-[#25D366] hover:underline"
-              >
-                {WHATSAPP_NUMBER}
-              </a>
+            {/* WhatsApp Support Cards */}
+            <div className="mb-10 space-y-4 max-w-md mx-auto">
+              <div className="bg-white/80 p-5 rounded-2xl border border-green-200/50 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                <div>
+                  <p className="text-[10px] text-muted font-bold tracking-wider uppercase">WhatsApp Support 1</p>
+                  <p className="font-outfit text-2xl font-bold text-[#25D366] mt-0.5">0340 6187831</p>
+                </div>
+                <CTAButton
+                  variant="whatsapp"
+                  size="sm"
+                  href={WHATSAPP_LINK_1(WHATSAPP_DEFAULT_MESSAGE)}
+                >
+                  Chat Support 1
+                </CTAButton>
+              </div>
+
+              <div className="bg-white/80 p-5 rounded-2xl border border-green-200/50 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                <div>
+                  <p className="text-[10px] text-muted font-bold tracking-wider uppercase">WhatsApp Support 2</p>
+                  <p className="font-outfit text-2xl font-bold text-[#25D366] mt-0.5">0349 6354307</p>
+                </div>
+                <CTAButton
+                  variant="whatsapp"
+                  size="sm"
+                  href={WHATSAPP_LINK_2(WHATSAPP_DEFAULT_MESSAGE)}
+                >
+                  Chat Support 2
+                </CTAButton>
+              </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
-              <CTAButton
-                variant="whatsapp"
-                size="lg"
-                href={WHATSAPP_LINK(WHATSAPP_DEFAULT_MESSAGE)}
-              >
-                Chat on WhatsApp
-              </CTAButton>
+            <div className="flex justify-center mb-8">
               <CTAButton
                 variant="primary"
                 size="lg"

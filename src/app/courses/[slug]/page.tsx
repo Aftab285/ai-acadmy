@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { COURSES, WHATSAPP_LINK, FAQ_DATA, DEMO_VIDEO_URL } from "@/lib/constants";
+import { COURSES, WHATSAPP_LINK, WHATSAPP_NUMBER, FAQ_DATA, DEMO_VIDEO_URL } from "@/lib/constants";
 import { generateCourseSchema, generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import CTAButton from "@/components/ui/CTAButton";
@@ -221,6 +221,104 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
                 </div>
               </div>
 
+              {/* Learning Path & Roadmap */}
+              {course.learningPath && (
+                <div className="mb-12">
+                  <h2 className="font-outfit text-2xl md:text-3xl font-bold mb-6">
+                    Learning Path & Roadmap
+                  </h2>
+                  <div className="flex flex-wrap items-center gap-2">
+                    {course.learningPath.map((step, i, arr) => (
+                      <div key={i} className="flex items-center gap-2 mb-2">
+                        <div className="px-4 py-2 bg-gradient-to-r from-primary/10 to-primary/5 rounded-xl border border-primary/10 text-primary font-semibold text-sm">
+                          {step}
+                        </div>
+                        {i < arr.length - 1 && (
+                          <span className="text-muted font-bold text-sm">➔</span>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Learning Outcomes */}
+              {course.learningOutcomes && (
+                <div className="mb-12">
+                  <h2 className="font-outfit text-2xl md:text-3xl font-bold mb-6">
+                    Learning Outcomes
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {course.learningOutcomes.map((outcome, i) => (
+                      <div key={i} className="flex items-start gap-3 p-4 bg-surface rounded-xl border border-gray-100 shadow-sm">
+                        <span className="text-secondary font-bold text-lg mt-0.5">✓</span>
+                        <span className="text-dark-light text-sm leading-relaxed">{outcome}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Practical Projects */}
+              {course.projects && (
+                <div className="mb-12">
+                  <h2 className="font-outfit text-2xl md:text-3xl font-bold mb-6">
+                    Practical Projects You Will Build
+                  </h2>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    {course.projects.map((project, i) => (
+                      <div key={i} className="flex flex-col p-5 bg-white border border-gray-100 rounded-xl shadow-sm hover:border-primary/30 transition-colors duration-200">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-secondary/10 text-secondary mb-3">
+                          <Icon name="tools" size={20} color="secondary" />
+                        </div>
+                        <h4 className="font-outfit font-bold text-dark mb-1 text-sm">{project}</h4>
+                        <p className="text-xs text-muted">Hands-on application</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Syllabus / Class-by-Class Roadmap */}
+              {course.syllabus && (
+                <div className="mb-12">
+                  <h2 className="font-outfit text-2xl md:text-3xl font-bold mb-6">
+                    Course Roadmap & Class Syllabus
+                  </h2>
+                  <div className="space-y-8">
+                    {course.syllabus.map((part, i) => (
+                      <div key={i} className="space-y-4">
+                        <h3 className="font-outfit text-xl font-bold text-primary border-b border-primary/20 pb-2">
+                          {part.partTitle}
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {part.classes.map((cls, j) => (
+                            <div key={j} className="p-5 bg-surface rounded-xl border border-gray-100 flex flex-col justify-between hover:shadow-md transition-shadow duration-200">
+                              <div>
+                                <span className="text-xs font-semibold text-secondary-light tracking-wide uppercase">
+                                  Class {cls.number}
+                                </span>
+                                <h4 className="font-outfit font-bold text-dark text-base mt-1 mb-2">
+                                  {cls.title}
+                                </h4>
+                                <ul className="space-y-1.5">
+                                  {cls.bullets.map((bullet, k) => (
+                                    <li key={k} className="flex items-start gap-2 text-xs text-muted">
+                                      <span className="text-primary mt-0.5">•</span>
+                                      <span>{bullet}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Who Is This Course For */}
               <div className="mb-12">
                 <h2 className="font-outfit text-2xl md:text-3xl font-bold mb-6">
@@ -287,8 +385,9 @@ export default async function CourseDetailPage({ params }: CoursePageProps) {
                       Watch Free Demo
                     </CTAButton>
                   </div>
-                  <p className="text-center text-sm text-muted mt-4">
-                    Contact on WhatsApp: 03406187831
+                  <p className="text-center text-xs text-muted mt-4 font-medium leading-relaxed">
+                    Contact on WhatsApp: <br />
+                    <span className="font-semibold text-primary">{WHATSAPP_NUMBER}</span>
                   </p>
                 </div>
 

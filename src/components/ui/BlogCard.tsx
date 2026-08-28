@@ -7,6 +7,7 @@ interface BlogCardProps {
   category: string;
   date: string;
   readingTime: string;
+  lang?: 'en' | 'ur';
 }
 
 const categoryColors: Record<string, string> = {
@@ -21,6 +22,18 @@ const categoryColors: Record<string, string> = {
   'learning-resources': 'bg-teal-100 text-teal-700',
 };
 
+const CATEGORY_NAMES_UR: Record<string, string> = {
+  'artificial-intelligence': 'آرٹیفیشل انٹیلیجنس',
+  chatgpt: 'چیٹ جی پی ٹی',
+  'ai-for-kids': 'بچوں کے لیے AI',
+  'ai-careers': 'AI کیریئرز',
+  'ai-news': 'AI خبریں',
+  technology: 'ٹیکنالوجی',
+  'student-guides': 'طلباء گائیڈز',
+  'parent-guides': 'والدین گائیڈز',
+  'learning-resources': 'سیکھنے کے وسائل',
+};
+
 export default function BlogCard({
   slug,
   title,
@@ -28,29 +41,41 @@ export default function BlogCard({
   category,
   date,
   readingTime,
+  lang = 'en',
 }: BlogCardProps) {
+  const isUrdu = lang === 'ur';
   const colorClasses = categoryColors[category] || 'bg-gray-100 text-gray-700';
 
-  const formattedDate = new Date(date).toLocaleDateString('en-PK', {
+  const formattedDate = new Date(date).toLocaleDateString(isUrdu ? 'ur-PK' : 'en-PK', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
   });
 
+  const categoryName = isUrdu 
+    ? (CATEGORY_NAMES_UR[category] || category) 
+    : category.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+
+  const localizedReadingTime = isUrdu 
+    ? readingTime.replace('min read', 'منٹ کا مطالعہ') 
+    : readingTime;
+
+  const postUrl = isUrdu ? `/ur/blog/${slug}` : `/blog/${slug}`;
+
   return (
-    <article className="card-hover group flex flex-col overflow-hidden rounded-2xl bg-white shadow-md">
+    <article className="card-hover group flex flex-col overflow-hidden rounded-2xl bg-white shadow-md text-right rtl:text-right">
       {/* Category & Date bar */}
-      <div className="flex items-center gap-3 border-b border-gray-50 px-6 pt-6 pb-4">
+      <div className="flex items-center gap-3 border-b border-gray-50 px-6 pt-6 pb-4 flex-row rtl:flex-row-reverse justify-between">
         <span className={`rounded-full px-3 py-1 text-xs font-semibold ${colorClasses}`}>
-          {category.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}
+          {categoryName}
         </span>
         <span className="text-xs text-muted">{formattedDate}</span>
       </div>
 
-      <div className="flex flex-1 flex-col px-6 pb-6 pt-4">
+      <div className="flex flex-1 flex-col px-6 pb-6 pt-4 text-left rtl:text-right">
         {/* Title */}
         <h3 className="font-outfit text-lg font-bold text-dark mb-2 group-hover:text-primary transition-colors line-clamp-2">
-          <Link href={`/blog/${slug}`} className="hover:underline">
+          <Link href={postUrl} className="hover:underline">
             {title}
           </Link>
         </h3>
@@ -61,18 +86,18 @@ export default function BlogCard({
         </p>
 
         {/* Reading time + Read more */}
-        <div className="flex items-center justify-between text-xs">
+        <div className="flex items-center justify-between text-xs flex-row rtl:flex-row-reverse">
           <span className="flex items-center gap-1 text-muted">
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            {readingTime}
+            {localizedReadingTime}
           </span>
           <Link
-            href={`/blog/${slug}`}
+            href={postUrl}
             className="font-semibold text-primary hover:text-primary-dark transition-colors"
           >
-            Read More →
+            {isUrdu ? "مزید پڑھیں ←" : "Read More →"}
           </Link>
         </div>
       </div>

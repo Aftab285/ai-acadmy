@@ -1,7 +1,15 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { STATS } from '@/lib/constants';
+
+const STATS_LABELS_UR: Record<string, string> = {
+  "Students Trained": "کامیاب طلباء",
+  "AI Projects Built": "بنائے گئے AI پروجیکٹس",
+  "Specialized Courses": "مخصوص کورسز",
+  "Satisfaction Rate": "اطمینان کی شرح",
+};
 
 function parseValue(value: string): { num: number; suffix: string } {
   const match = value.match(/^(\d+)(.*)$/);
@@ -66,6 +74,9 @@ export default function StatsCounter() {
     return () => observer.disconnect();
   }, []);
 
+  const pathname = usePathname();
+  const isUrdu = pathname.startsWith('/ur') || pathname.includes('/ur/');
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-20">
       <div
@@ -74,6 +85,7 @@ export default function StatsCounter() {
       >
         {STATS.map((stat, index) => {
           const { num, suffix } = parseValue(stat.value);
+          const localizedLabel = isUrdu ? (STATS_LABELS_UR[stat.label] || stat.label) : stat.label;
           return (
             <div
               key={index}
@@ -85,7 +97,7 @@ export default function StatsCounter() {
             >
               <CountUp target={num} suffix={suffix} animate={isVisible} />
               <span className="mt-2 text-sm font-medium text-muted">
-                {stat.label}
+                {localizedLabel}
               </span>
             </div>
           );

@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Outfit } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import "./globals.css";
+import "../globals.css";
 import { DEFAULT_METADATA } from "@/lib/metadata";
 import { generateOrganizationSchema, generateLocalBusinessSchema } from "@/lib/schema";
 import Header from "@/components/layout/Header";
@@ -28,7 +28,7 @@ export const viewport: Viewport = {
   themeColor: "#044F95",
 };
 
-export default function RootLayout({
+export default function UrduRootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -37,7 +37,7 @@ export default function RootLayout({
   const businessSchema = generateLocalBusinessSchema();
 
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="ur" dir="rtl" className={`${inter.variable} ${outfit.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/logo.png" />
@@ -50,10 +50,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
         />
       </head>
-      <body className="font-inter antialiased">
-        <Header />
+      <body className="font-urdu antialiased bg-white text-gray-800">
+        <Header lang="ur" />
         <main>{children}</main>
-        <Footer />
+        <Footer lang="ur" />
         <WhatsAppButton />
       </body>
       <GoogleAnalytics gaId="G-FMQHSWHSPZ" />

@@ -3,13 +3,29 @@ import { COURSES } from '@/lib/constants';
 import SectionHeading from '@/components/ui/SectionHeading';
 import CourseCard from '@/components/ui/CourseCard';
 
-export default function CoursesPreview() {
+const TRANSLATIONS = {
+  en: {
+    title: "Our AI Courses",
+    subtitle: "Explore our comprehensive range of AI courses designed for every skill level — from absolute beginners to advanced learners.",
+    viewAll: "View All Courses",
+  },
+  ur: {
+    title: "ہمارے AI کورسز",
+    subtitle: "ہر مہارت کے درجے کے لیے ڈیزائن کیے گئے ہمارے AI کورسز — بگنرز سے لے کر ایڈوانسڈ سیکھنے والوں تک۔",
+    viewAll: "تمام کورسز دیکھیں",
+  },
+} as const;
+
+export default function CoursesPreview({ lang = 'en' }: { lang?: 'en' | 'ur' }) {
+  const isUrdu = lang === 'ur';
+  const t = TRANSLATIONS[isUrdu ? 'ur' : 'en'];
+
   return (
     <section className="section-gradient-light py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Our AI Courses"
-          subtitle="Explore our comprehensive range of AI courses designed for every skill level — from absolute beginners to advanced learners."
+          title={t.title}
+          subtitle={t.subtitle}
         />
 
         {/* Course Grid */}
@@ -22,12 +38,12 @@ export default function CoursesPreview() {
         {/* View All Link */}
         <div className="mt-12 text-center">
           <Link
-            href="/courses"
+            href={isUrdu ? "/ur/courses" : "/courses"}
             className="inline-flex items-center gap-2 text-base font-semibold text-primary transition-colors hover:text-primary-dark group"
           >
-            View All Courses
+            {t.viewAll}
             <svg
-              className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+              className={`h-5 w-5 transition-transform duration-300 ${isUrdu ? 'rotate-180 group-hover:-translate-x-1' : 'group-hover:translate-x-1'}`}
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"

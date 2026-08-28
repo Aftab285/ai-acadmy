@@ -10,7 +10,63 @@ import {
 } from '@/lib/constants';
 import Icon from '@/components/ui/Icon';
 
-export default function Footer() {
+const TRANSLATIONS = {
+  en: {
+    AcademyName: "Pakistan AI Academy",
+    Description: "Pakistan's leading online AI academy offering live classes in Artificial Intelligence, Machine Learning, ChatGPT, and Generative AI for students and beginners across Pakistan.",
+    QuickLinks: "Quick Links",
+    OurCourses: "Our Courses",
+    Home: "Home",
+    Courses: "Courses",
+    "AI for Kids": "AI for Kids",
+    "Why Learn AI": "Why Learn AI",
+    "Student Projects": "Student Projects",
+    "Success Stories": "Success Stories",
+    Blog: "Blog",
+    About: "About",
+    Contact: "Contact",
+    PrivacyPolicy: "Privacy Policy",
+    TermsOfService: "Terms of Service",
+    DevelopedBy: "Designed & Developed by",
+    AllRightsReserved: "All rights reserved.",
+  },
+  ur: {
+    AcademyName: "پاکستان AI اکیڈمی",
+    Description: "پاکستان کی صفِ اول کی آن لائن AI اکیڈمی جو پورے پاکستان میں طلباء اور مبتدیوں کے لیے آرٹیفیشل انٹیلیجنس، مشین لرننگ، چیٹ جی پی ٹی، اور جنریٹو AI میں لائیو کلاسز فراہم کرتی ہے۔",
+    QuickLinks: "فوری لنکس",
+    OurCourses: "ہمارے کورسز",
+    Home: "ہوم",
+    Courses: "کورسز",
+    "AI for Kids": "بچوں کے لیے AI",
+    "Why Learn AI": "AI کیوں سیکھیں؟",
+    "Student Projects": "طلباء کے پروجیکٹس",
+    "Success Stories": "کامیابی کی کہانیاں",
+    Blog: "بلاگ",
+    About: "ہمارے بارے میں",
+    Contact: "رابطہ کریں",
+    PrivacyPolicy: "پرائیویسی پالیسی",
+    TermsOfService: "شرائط و ضوابط",
+    DevelopedBy: "ڈیزائن اور ڈیولپ کیا گیا بذریعہ",
+    AllRightsReserved: "جملہ حقوق محفوظ ہیں۔",
+  },
+} as const;
+
+const COURSE_TITLES_UR: Record<string, string> = {
+  "Beginner AI Course": "بگنر AI کورس",
+  "Intermediate AI Course": "انٹرمیڈیٹ AI کورس",
+  "Advanced AI Course": "ایڈوانسڈ AI کورس",
+  "ChatGPT Course": "چیٹ جی پی ٹی کورس",
+  "Generative AI Course": "جنریٹو AI کورس",
+  "Prompt Engineering Course": "پرامپٹ انجینئرنگ کورس",
+  "AI Tools Course": "AI ٹولز کورس",
+  "Python Programming Course": "Python پروگرامنگ کورس",
+  "Python & AI Development Course": "Python اور AI ڈیولپمنٹ کورس",
+};
+
+export default function Footer({ lang = 'en' }: { lang?: 'en' | 'ur' }) {
+  const isUrdu = lang === 'ur';
+  const t = TRANSLATIONS[isUrdu ? 'ur' : 'en'];
+
   return (
     <footer className="bg-dark text-gray-300">
       {/* Main Footer */}
@@ -18,7 +74,7 @@ export default function Footer() {
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand Column */}
           <div className="space-y-5">
-            <Link href="/" className="flex items-center gap-2.5" aria-label={`${SITE_NAME} — Home`}>
+            <Link href={isUrdu ? '/ur' : '/'} className="flex items-center gap-2.5" aria-label={`${SITE_NAME} — Home`}>
               <Image
                 src="/logo.png"
                 alt={`${SITE_NAME} Logo`}
@@ -27,13 +83,11 @@ export default function Footer() {
                 className="rounded-lg"
               />
               <span className="font-outfit text-lg font-bold text-white">
-                Pakistan AI Academy
+                {t.AcademyName}
               </span>
             </Link>
             <p className="max-w-xs text-sm leading-relaxed text-gray-400">
-              Pakistan&apos;s leading online AI academy offering live classes in Artificial
-              Intelligence, Machine Learning, ChatGPT, and Generative AI for students and
-              beginners across Pakistan.
+              {t.Description}
             </p>
 
             {/* WhatsApp number */}
@@ -76,39 +130,47 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="font-outfit text-base font-semibold text-white mb-5">
-              Quick Links
+              {t.QuickLinks}
             </h3>
             <ul className="space-y-3">
-              {NAV_LINKS.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="inline-block text-sm text-gray-400 transition-colors hover:text-white hover:translate-x-1 transform duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {NAV_LINKS.map((link) => {
+                const localizedLabel = t[link.label as keyof typeof t] || link.label;
+                const localizedHref = isUrdu ? (link.href === '/' ? '/ur' : `/ur${link.href}`) : link.href;
+                return (
+                  <li key={link.href}>
+                    <Link
+                      href={localizedHref}
+                      className="inline-block text-sm text-gray-400 transition-colors hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transform duration-200"
+                    >
+                      {localizedLabel}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
           {/* Courses */}
           <div>
             <h3 className="font-outfit text-base font-semibold text-white mb-5">
-              Our Courses
+              {t.OurCourses}
             </h3>
             <ul className="space-y-3">
-              {COURSES.map((course) => (
-                <li key={course.slug}>
-                  <Link
-                    href={`/courses/${course.slug}`}
-                    className="inline-flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white hover:translate-x-1 transform duration-200 group"
-                  >
-                    <Icon name={course.icon} size={14} color="primary" className="text-gray-400 group-hover:text-primary-light" />
-                    {course.shortTitle}
-                  </Link>
-                </li>
-              ))}
+              {COURSES.map((course) => {
+                const localizedTitle = isUrdu ? (COURSE_TITLES_UR[course.shortTitle] || course.shortTitle) : course.shortTitle;
+                const localizedHref = isUrdu ? `/ur/courses/${course.slug}` : `/courses/${course.slug}`;
+                return (
+                  <li key={course.slug}>
+                    <Link
+                      href={localizedHref}
+                      className="inline-flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white hover:translate-x-1 rtl:hover:-translate-x-1 transform duration-200 group"
+                    >
+                      <Icon name={course.icon} size={14} color="primary" className="text-gray-400 group-hover:text-primary-light" />
+                      {localizedTitle}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
@@ -117,13 +179,13 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-6 sm:flex-row sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs text-gray-500 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-xs text-gray-500 text-center sm:text-left rtl:sm:text-right">
             <p>
-              © 2024–2026 {SITE_NAME}. All rights reserved.
+              © 2024–2026 {isUrdu ? 'پاکستان AI آن لائن اکیڈمی۔' : SITE_NAME + '.'} {t.AllRightsReserved}
             </p>
             <span className="hidden sm:inline text-gray-700">|</span>
             <p className="hover:text-white transition-colors duration-200">
-              Designed & Developed by{" "}
+              {t.DevelopedBy}{" "}
               <a
                 href="https://aiwebsiteservice.com/"
                 target="_blank"
@@ -135,11 +197,11 @@ export default function Footer() {
             </p>
           </div>
           <div className="flex items-center gap-6 text-xs text-gray-500">
-            <Link href="/privacy-policy" className="transition-colors hover:text-white">
-              Privacy Policy
+            <Link href={isUrdu ? '/ur/privacy-policy' : '/privacy-policy'} className="transition-colors hover:text-white">
+              {t.PrivacyPolicy}
             </Link>
-            <Link href="/terms" className="transition-colors hover:text-white">
-              Terms of Service
+            <Link href={isUrdu ? '/ur/terms' : '/terms'} className="transition-colors hover:text-white">
+              {t.TermsOfService}
             </Link>
           </div>
         </div>

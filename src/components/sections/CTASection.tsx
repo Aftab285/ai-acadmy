@@ -1,7 +1,25 @@
 import { WHATSAPP_LINK, WHATSAPP_DEFAULT_MESSAGE, WHATSAPP_NUMBER } from '@/lib/constants';
 import CTAButton from '@/components/ui/CTAButton';
 
-export default function CTASection() {
+const TRANSLATIONS = {
+  en: {
+    heading: "Ready to Start Learning AI?",
+    subtitle: "Join hundreds of students across Pakistan who are already building their future with Artificial Intelligence. Book a free demo class today — no commitment required.",
+    button: "Chat on WhatsApp Now",
+    support: "Or call / message us directly: ",
+  },
+  ur: {
+    heading: "کیا آپ AI سیکھنے کے لیے تیار ہیں؟",
+    subtitle: "پاکستان بھر کے ان سینکڑوں طلباء میں شامل ہوں جو آرٹیفیشل انٹیلیجنس کے ساتھ اپنا مستقبل روشن بنا رہے ہیں۔ آج ہی فری ڈیمو کلاس بک کریں۔",
+    button: "ابھی واٹس ایپ پر چیٹ کریں",
+    support: "یا ہمیں براہِ راست کال یا پیغام بھیجیں: ",
+  },
+} as const;
+
+export default function CTASection({ lang = 'en' }: { lang?: 'en' | 'ur' }) {
+  const isUrdu = lang === 'ur';
+  const t = TRANSLATIONS[isUrdu ? 'ur' : 'en'];
+
   return (
     <section className="section-gradient-blue relative overflow-hidden py-20 lg:py-28">
       {/* Decorative elements */}
@@ -14,13 +32,12 @@ export default function CTASection() {
       <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         {/* Heading */}
         <h2 className="font-outfit text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
-          Ready to Start Learning AI?
+          {t.heading}
         </h2>
 
         {/* Subtitle */}
         <p className="mt-5 text-lg leading-relaxed text-white/80 sm:text-xl">
-          Join hundreds of students across Pakistan who are already building their future with
-          Artificial Intelligence. Book a free demo class today — no commitment required.
+          {t.subtitle}
         </p>
 
         {/* CTA Button */}
@@ -31,13 +48,13 @@ export default function CTASection() {
             size="lg"
             external
           >
-            Chat on WhatsApp Now
+            {t.button}
           </CTAButton>
         </div>
 
         {/* WhatsApp number */}
         <p className="mt-6 text-sm text-white/60">
-          Or call / message us directly:{' '}
+          {t.support}{' '}
           <a
             href={`tel:${WHATSAPP_NUMBER}`}
             className="font-semibold text-white/80 underline underline-offset-2 hover:text-white transition-colors"

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 interface CertificateItem {
@@ -52,9 +53,16 @@ const CERTIFICATES: CertificateItem[] = [
 
 export default function StudentCertificates() {
   const [selectedImg, setSelectedImg] = useState<string | null>(null);
+  const pathname = usePathname();
+  const isUrdu = pathname.startsWith('/ur') || pathname.includes('/ur/');
 
   // We duplicate the list to make the marquee transition infinite and seamless
   const marqueeList = [...CERTIFICATES, ...CERTIFICATES];
+
+  const title = isUrdu ? "تصدیق شدہ طلباء کی کامیابیاں" : "Verified Student Achievements";
+  const subtitle = isUrdu 
+    ? "ہمارے ان فارغ التحصیل طلباء کو مبارکباد جنہوں نے اپنے AI کورسز کامیابی سے مکمل کیے۔" 
+    : "Congratulations to our recently graduated students who successfully completed their AI courses.";
 
   return (
     <section id="certificates" className="py-20 lg:py-28 bg-slate-950 text-white relative overflow-hidden">
@@ -64,8 +72,8 @@ export default function StudentCertificates() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          title="Verified Student Achievements"
-          subtitle="Congratulations to our recently graduated students who successfully completed their AI courses."
+          title={title}
+          subtitle={subtitle}
           centered
           className="[&_h2]:text-white [&_p]:text-blue-100"
         />
@@ -110,10 +118,10 @@ export default function StudentCertificates() {
                     {item.studentName}
                   </h4>
                   <p className="text-xs font-semibold text-secondary-light mt-1">
-                    {item.courseName}
+                    {isUrdu ? "AI فاؤنڈیشن کورس" : item.courseName}
                   </p>
                   <p className="text-[10px] text-white/50 mt-1.5 font-medium">
-                    {item.issueDate}
+                    {isUrdu ? "جمعہ، 14 اگست 2026" : item.issueDate}
                   </p>
                 </div>
               </div>

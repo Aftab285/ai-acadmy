@@ -2,7 +2,39 @@ import { TRUST_BADGES, WHATSAPP_LINK, DEMO_VIDEO_URL, WHATSAPP_DEFAULT_MESSAGE }
 import TrustBadge from '@/components/ui/TrustBadge';
 import CTAButton from '@/components/ui/CTAButton';
 
-export default function HeroSection() {
+const TRANSLATIONS = {
+  en: {
+    eyebrow: "Now Enrolling — Live Online Classes",
+    h1Prefix: "Online AI Courses in Pakistan ",
+    h1Highlighted: "for Students & Beginners",
+    subheadline: "Live online classes in Artificial Intelligence, Machine Learning, ChatGPT, and Generative AI — designed for students and beginners across Pakistan. Start your AI journey with expert guidance.",
+    ctaWatch: "Watch Free Demo",
+    ctaChat: "Chat on WhatsApp",
+  },
+  ur: {
+    eyebrow: "داخلے جاری ہیں — لائیو آن لائن کلاسز",
+    h1Prefix: "پاکستان میں آن لائن AI کورسز ",
+    h1Highlighted: "طلباء اور مبتدیوں کے لیے",
+    subheadline: "آرٹیفیشل انٹیلیجنس، مشین لرننگ، چیٹ جی پی ٹی، اور جنریٹو AI میں لائیو آن لائن کلاسز — جو خاص طور پر پاکستان بھر کے طلباء اور مبتدیوں کے لیے ڈیزائن کی گئی ہیں۔ اپنے سفر کا آغاز کریں۔",
+    ctaWatch: "مفت ڈیمو دیکھیں",
+    ctaChat: "واٹس ایپ پر رابطہ کریں",
+  },
+} as const;
+
+const BADGE_LABELS_UR: Record<string, string> = {
+  "100% Online": "100% آن لائن",
+  "Live Classes": "لائیو کلاسز",
+  "Expert AI Instructor": "ماہر AI انسٹرکٹر",
+  "Project Based Learning": "پروجیکٹ بیسڈ لرننگ",
+  "Beginner Friendly": "مبتدیوں کے لیے آسان",
+  "Certificate of Completion": "کورس کا سرٹیفکیٹ",
+  "Learn From Anywhere in Pakistan": "پورے پاکستان سے سیکھیں",
+};
+
+export default function HeroSection({ lang = 'en' }: { lang?: 'en' | 'ur' }) {
+  const isUrdu = lang === 'ur';
+  const t = TRANSLATIONS[isUrdu ? 'ur' : 'en'];
+
   return (
     <section className="hero-gradient relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Decorative floating shapes */}
@@ -28,14 +60,14 @@ export default function HeroSection() {
           {/* Eyebrow */}
           <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white/90 backdrop-blur-sm animate-fade-in">
             <span className="h-2 w-2 rounded-full bg-secondary animate-pulse" aria-hidden="true" />
-            Now Enrolling — Live Online Classes
+            {t.eyebrow}
           </div>
 
           {/* Main heading */}
           <h1 className="font-outfit text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl animate-slide-up">
-            Pakistan&apos;s Leading{' '}
-            <span className="relative inline-block">
-              Online AI Academy
+            {t.h1Prefix}{' '}
+            <span className="relative inline-block mt-2 sm:mt-0">
+              {t.h1Highlighted}
               <span
                 className="absolute -bottom-2 left-0 h-1.5 w-full rounded-full bg-gradient-to-r from-secondary to-secondary-light"
                 aria-hidden="true"
@@ -45,9 +77,7 @@ export default function HeroSection() {
 
           {/* Subheadline */}
           <p className="mt-6 text-lg leading-relaxed text-white/80 sm:text-xl animate-slide-up" style={{ animationDelay: '0.15s' }}>
-            Live online classes in Artificial Intelligence, Machine Learning, ChatGPT, and
-            Generative AI — designed for students and beginners across Pakistan. Start your
-            AI journey with expert guidance.
+            {t.subheadline}
           </p>
 
           {/* CTA Buttons */}
@@ -58,7 +88,7 @@ export default function HeroSection() {
               size="lg"
               external
             >
-              Watch Free Demo
+              {t.ctaWatch}
             </CTAButton>
             <CTAButton
               variant="whatsapp"
@@ -66,15 +96,18 @@ export default function HeroSection() {
               size="lg"
               external
             >
-              Chat on WhatsApp
+              {t.ctaChat}
             </CTAButton>
           </div>
 
           {/* Trust Badges */}
           <div className="mt-14 flex flex-wrap items-center justify-center gap-3 animate-fade-in" style={{ animationDelay: '0.5s' }}>
-            {TRUST_BADGES.slice(0, 5).map((badge) => (
-              <TrustBadge key={badge.label} icon={badge.icon} label={badge.label} />
-            ))}
+            {TRUST_BADGES.slice(0, 5).map((badge) => {
+              const localizedLabel = isUrdu ? (BADGE_LABELS_UR[badge.label] || badge.label) : badge.label;
+              return (
+                <TrustBadge key={badge.label} icon={badge.icon} label={localizedLabel} />
+              );
+            })}
           </div>
         </div>
       </div>

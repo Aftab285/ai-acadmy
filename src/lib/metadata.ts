@@ -18,8 +18,21 @@ export function generatePageMetadata({
   ogImage = "/og-image.png",
   noIndex = false,
 }: PageMetadataOptions): Metadata {
-  const url = `${SITE_DOMAIN}${path}`;
-  const fullTitle = path === "/" ? `${SITE_NAME} — ${title}` : title;
+  const isUrduPath = path.startsWith('/ur') || path.includes('/ur/');
+  
+  const englishRelativePath = isUrduPath 
+    ? (path.replace(/^\/ur/, '') === '' ? '/' : path.replace(/^\/ur/, '')) 
+    : path;
+
+  const urduRelativePath = isUrduPath 
+    ? path 
+    : (path === '/' ? '/ur' : `/ur${path}`);
+
+  const canonicalUrl = `${SITE_DOMAIN}${path}`;
+  const englishUrl = `${SITE_DOMAIN}${englishRelativePath}`;
+  const urduUrl = `${SITE_DOMAIN}${urduRelativePath}`;
+
+  const fullTitle = (path === "/" || path === "/ur") ? `${SITE_NAME} — ${title}` : title;
 
   return {
     title: fullTitle,
@@ -32,15 +45,20 @@ export function generatePageMetadata({
       "Pakistan AI Online Academy",
     ],
     alternates: {
-      canonical: url,
+      canonical: canonicalUrl,
+      languages: {
+        en: englishUrl,
+        ur: urduUrl,
+        'x-default': englishUrl,
+      },
     },
     openGraph: {
       title: fullTitle,
       description,
-      url,
+      url: canonicalUrl,
       siteName: SITE_NAME,
-      locale: "en_PK",
-      type: path === "/" ? "website" : "article",
+      locale: isUrduPath ? "ur_PK" : "en_PK",
+      type: (path === "/" || path === "/ur") ? "website" : "article",
       images: [
         {
           url: `${SITE_DOMAIN}${ogImage}`,

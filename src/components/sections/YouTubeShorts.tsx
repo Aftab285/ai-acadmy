@@ -6,27 +6,37 @@ interface ShortItem {
   id: string;
   title: string;
   badge: string;
+  badgeUr: string;
+  titleUr: string;
 }
 
 const SHORTS: ShortItem[] = [
   {
     id: "327gBQiCdBw",
     title: "Artificial Intelligence Concepts Explained",
+    titleUr: "آرٹیفیشل انٹیلیجنس کے بنیادی تصورات کی وضاحت",
     badge: "AI Concepts 🤖",
+    badgeUr: "AI تصورات 🤖",
   },
   {
     id: "uWv0dkED5cA",
     title: "AI Applications & Future Tech Insights",
+    titleUr: "AI کا استعمال اور مستقبل کی جدید ٹیکنالوجی",
     badge: "Future Tech 💡",
+    badgeUr: "جدید ٹیکنالوجی 💡",
   },
   {
     id: "9--hN_Qluks",
     title: "Understanding Artificial Intelligence Trends",
+    titleUr: "آرٹیفیشل انٹیلیجنس کے رجحانات کو سمجھنا",
     badge: "AI Trends ⚡",
+    badgeUr: "AI رجحانات ⚡",
   },
 ];
 
-export default function YouTubeShorts() {
+export default function YouTubeShorts({ lang = 'en' }: { lang?: 'en' | 'ur' }) {
+  const isUrdu = lang === 'ur';
+
   return (
     <section id="shorts" className="py-20 bg-gradient-to-b from-slate-900 via-primary/95 to-slate-900 text-white relative overflow-hidden">
       {/* Decorative background blur elements */}
@@ -35,7 +45,7 @@ export default function YouTubeShorts() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
-          title="SHORTS"
+          title={isUrdu ? "ویڈیو شارٹس" : "SHORTS"}
           centered
           className="[&_h2]:text-white"
         />
@@ -48,15 +58,15 @@ export default function YouTubeShorts() {
               className="group relative bg-slate-800/80 backdrop-blur-xl border border-white/10 rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 hover:-translate-y-2 hover:border-secondary/50 hover:shadow-secondary/20"
             >
               {/* Badge Header */}
-              <div className="p-4 bg-gradient-to-r from-slate-900/90 to-primary/30 flex items-center justify-between border-b border-white/10">
+              <div className="p-4 bg-gradient-to-r from-slate-900/90 to-primary/30 flex items-center justify-between border-b border-white/10 flex-row rtl:flex-row-reverse">
                 <span className="text-xs font-semibold px-3 py-1 bg-secondary/20 text-secondary border border-secondary/30 rounded-full">
-                  {short.badge}
+                  {isUrdu ? short.badgeUr : short.badge}
                 </span>
                 <span className="text-xs text-blue-200 flex items-center gap-1 font-medium">
                   <svg className="w-4 h-4 text-red-500 fill-current" viewBox="0 0 24 24">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                   </svg>
-                  YouTube Short
+                  {isUrdu ? "یوٹیوب شارٹ" : "YouTube Short"}
                 </span>
               </div>
 
@@ -64,7 +74,7 @@ export default function YouTubeShorts() {
               <div className="relative w-full aspect-[9/16] bg-black">
                 <iframe
                   src={`https://www.youtube.com/embed/${short.id}?rel=0&modestbranding=1`}
-                  title={short.title}
+                  title={isUrdu ? short.titleUr : short.title}
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   className="absolute inset-0 w-full h-full border-0"
@@ -74,7 +84,7 @@ export default function YouTubeShorts() {
               {/* Card Title Footer */}
               <div className="p-4 bg-slate-900/90 text-center border-t border-white/10">
                 <h3 className="font-outfit font-semibold text-sm text-white line-clamp-2 leading-snug">
-                  {short.title}
+                  {isUrdu ? short.titleUr : short.title}
                 </h3>
               </div>
             </div>
@@ -83,11 +93,17 @@ export default function YouTubeShorts() {
 
         {/* Call to action below videos */}
         <div className="mt-14 text-center">
-          <p className="text-blue-100 text-lg mb-6 max-w-xl mx-auto">
-            Interested in mastering these AI concepts step-by-step? Book a <strong>Free Live Demo Class</strong> on WhatsApp today!
-          </p>
+          {isUrdu ? (
+            <p className="text-blue-100 text-lg mb-6 max-w-xl mx-auto font-urdu">
+              کیا آپ ان AI تصورات کو مرحلہ وار سیکھنے میں دلچسپی رکھتے ہیں؟ آج ہی واٹس ایپ پر ایک <strong>مفت لائیو ڈیمو کلاس</strong> بک کریں!
+            </p>
+          ) : (
+            <p className="text-blue-100 text-lg mb-6 max-w-xl mx-auto">
+              Interested in mastering these AI concepts step-by-step? Book a <strong>Free Live Demo Class</strong> on WhatsApp today!
+            </p>
+          )}
           <CTAButton href={DEMO_VIDEO_URL} external variant="primary" size="lg">
-            Watch Free Demo
+            {isUrdu ? "مفت ڈیمو دیکھیں" : "Watch Free Demo"}
           </CTAButton>
         </div>
       </div>

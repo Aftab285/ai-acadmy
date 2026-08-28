@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: CoursePageProps): Promise<Met
   if (!course) return {};
 
   return {
-    title: `${course.title} | پاکستان AI آن لائن اکیڈمی`,
+    title: `${course.shortTitle} | پاکستان AI اکیڈمی`,
     description: course.description,
     keywords: [
       course.shortTitle,

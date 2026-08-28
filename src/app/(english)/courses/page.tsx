@@ -9,9 +9,9 @@ import CTASection from "@/components/sections/CTASection";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "AI Courses in Pakistan | Online AI Courses | Pakistan AI Online Academy",
+  title: "AI Courses in Pakistan | Pakistan AI Academy",
   description:
-    "Explore our comprehensive AI courses for students and beginners in Pakistan. From beginner to advanced — learn AI, Machine Learning, ChatGPT, Generative AI, and Prompt Engineering through live online classes.",
+    "Explore our live online AI, Python, ChatGPT, and Generative AI courses designed for students and beginners in Pakistan.",
   path: "/courses",
   keywords: [
     "AI Courses Pakistan",

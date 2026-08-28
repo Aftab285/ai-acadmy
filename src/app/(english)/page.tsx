@@ -17,9 +17,9 @@ import StatsCounter from "@/components/ui/StatsCounter";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Pakistan's Leading Online AI Academy",
+  title: "Online AI Courses in Pakistan | Pakistan AI Academy",
   description:
-    "Master Artificial Intelligence through live online classes at Pakistan AI Online Academy. Best AI courses for students and beginners across Pakistan. Learn AI, Machine Learning, ChatGPT, and Generative AI from expert instructors.",
+    "Master Artificial Intelligence, Machine Learning & ChatGPT with live online classes in Pakistan. Designed for students and beginners.",
   path: "/",
   keywords: [
     "AI Course Pakistan",

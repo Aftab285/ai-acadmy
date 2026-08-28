@@ -16,9 +16,9 @@ import StatsCounter from "@/components/ui/StatsCounter";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "پاکستان کی صفِ اول کی آن لائن AI اکیڈمی",
+  title: "پاکستان میں آن لائن AI کورسز | پاکستان AI اکیڈمی",
   description:
-    "پاکستان AI آن لائن اکیڈمی میں لائیو آن لائن کلاسز کے ذریعے آرٹیفیشل انٹیلیجنس سیکھیں۔ طلباء اور مبتدیوں کے لیے بہترین AI کورسز۔ ماہر اساتذہ سے مشین لرننگ، چیٹ جی پی ٹی اور جنریٹو AI سیکھیں۔",
+    "پاکستان میں طلباء اور مبتدیوں کے لیے لائیو آن لائن کلاسز۔ آرٹیفیشل انٹیلیجنس، مشین لرننگ، اور چیٹ جی پی ٹی سیکھیں۔",
   path: "/ur",
   keywords: [
     "AI Course Pakistan",

@@ -240,7 +240,8 @@ export default function CourseCard({ course, lang = 'en' }: CourseCardProps) {
             href={isUrdu ? `/ur/courses/${course.slug}` : `/courses/${course.slug}`}
             className="inline-flex items-center justify-center rounded-xl border border-gray-200 px-3 py-2.5 text-xs font-semibold text-dark hover:bg-surface hover:text-primary transition-colors"
           >
-            {viewDetailsLabel}
+            <span>{viewDetailsLabel}</span>
+            <span className="sr-only"> {course.shortTitle}</span>
           </Link>
           <a
             href={WHATSAPP_LINK(whatsappMessage)}
@@ -248,7 +249,8 @@ export default function CourseCard({ course, lang = 'en' }: CourseCardProps) {
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-1 rounded-xl bg-gradient-to-r from-primary to-primary-light px-3 py-2.5 text-xs font-semibold text-white shadow-sm hover:opacity-90 active:scale-95 transition-all"
           >
-            {enrollLabel}
+            <span>{enrollLabel}</span>
+            <span className="sr-only"> {course.shortTitle}</span>
           </a>
         </div>
       </div>

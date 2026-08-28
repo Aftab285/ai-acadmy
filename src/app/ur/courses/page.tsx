@@ -9,9 +9,9 @@ import CTASection from "@/components/sections/CTASection";
 import FAQAccordion from "@/components/ui/FAQAccordion";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "پاکستان میں آن لائن AI کورسز | پاکستان AI آن لائن اکیڈمی",
+  title: "آن لائن AI کورسز | پاکستان AI اکیڈمی",
   description:
-    "پاکستان میں طلباء اور مبتدیوں کے لیے ہمارے جامع آن لائن AI کورسز تلاش کریں۔ لائیو کلاسز کے ذریعے آرٹیفیشل انٹیلیجنس، مشین لرننگ، چیٹ جی پی ٹی اور جنریٹو AI سیکھیں۔",
+    "طلباء اور مبتدیوں کے لیے آن لائن AI کورسز۔ لائیو کلاسز کے ذریعے مشین لرننگ، چیٹ جی پی ٹی اور پائتھون سیکھیں۔",
   path: "/ur/courses",
   keywords: [
     "AI Courses Pakistan",

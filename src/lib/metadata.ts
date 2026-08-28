@@ -32,7 +32,7 @@ export function generatePageMetadata({
   const englishUrl = `${SITE_DOMAIN}${englishRelativePath}`;
   const urduUrl = `${SITE_DOMAIN}${urduRelativePath}`;
 
-  const fullTitle = (path === "/" || path === "/ur") ? `${SITE_NAME} — ${title}` : title;
+  const fullTitle = title;
 
   return {
     title: fullTitle,

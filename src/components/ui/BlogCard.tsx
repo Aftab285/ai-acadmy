@@ -97,7 +97,8 @@ export default function BlogCard({
             href={postUrl}
             className="font-semibold text-primary hover:text-primary-dark transition-colors"
           >
-            {isUrdu ? "مزید پڑھیں ←" : "Read More →"}
+            <span>{isUrdu ? "مزید پڑھیں ←" : "Read More →"}</span>
+            <span className="sr-only"> {title}</span>
           </Link>
         </div>
       </div>

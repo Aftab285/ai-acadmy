@@ -31,6 +31,7 @@ export const DEMO_VIDEO_URL =
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "Courses", href: "/courses" },
+  { label: "AI for Kids", href: "/ai-course-for-kids-in-pakistan" },
   { label: "Why Learn AI", href: "/why-learn-ai" },
   { label: "Student Projects", href: "/student-projects" },
   { label: "Success Stories", href: "/success-stories" },

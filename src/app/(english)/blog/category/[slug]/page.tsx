@@ -29,6 +29,10 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     alternates: {
       canonical: `https://pakistanaionlineacademy.com/blog/category/${category.slug}`,
     },
+    robots: {
+      index: false,
+      follow: true,
+    },
     keywords: [
       `${category.name} Articles`,
       `${category.name} Blog`,

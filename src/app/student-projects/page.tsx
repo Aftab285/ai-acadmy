@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { generatePageMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema } from "@/lib/schema";
 import { STUDENT_PROJECTS, WHATSAPP_LINK, DEMO_VIDEO_URL } from "@/lib/constants";
@@ -114,33 +115,55 @@ export default function StudentProjectsPage() {
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
-                      {project.category}
-                    </span>
-                    <span className="text-sm text-muted">
-                      {project.studentName}, Age {project.studentAge}
-                    </span>
+                <div className="p-6 flex flex-col justify-between flex-1">
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase tracking-wider">
+                        {project.category}
+                      </span>
+                      <span className="text-xs text-muted font-medium">
+                        {project.studentName}, Age {project.studentAge}
+                      </span>
+                    </div>
+
+                    <h3 className="font-outfit font-bold text-lg text-dark mb-2">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-muted text-xs mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    <div className="mb-4 bg-surface p-3.5 rounded-xl border border-gray-100/50">
+                      <span className="text-[10px] font-bold text-primary uppercase tracking-wider block mb-1">Course Taken:</span>
+                      <Link href={`/courses/${project.courseSlug}`} className="text-xs font-semibold text-dark hover:text-primary underline mb-2.5 block">
+                        {project.courseTaken}
+                      </Link>
+
+                      <span className="text-[10px] font-bold text-primary uppercase tracking-wider block mb-1">What was learned:</span>
+                      <p className="text-xs text-muted leading-relaxed mb-2.5">{project.whatLearned}</p>
+
+                      <span className="text-[10px] font-bold text-primary uppercase tracking-wider block mb-1">Technologies Used:</span>
+                      <div className="flex flex-wrap gap-1.5 mt-1">
+                        {project.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="px-2 py-0.5 bg-white text-[10px] font-semibold text-dark-light rounded border border-gray-100 shadow-sm"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
 
-                  <h3 className="font-outfit font-semibold text-lg mb-3">
-                    {project.title}
-                  </h3>
-
-                  <p className="text-muted text-sm mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2">
-                    {project.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-2 py-1 bg-surface text-xs font-medium text-dark-light rounded"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                  <div className="mt-2 border-t border-gray-100 pt-4 flex items-center justify-between">
+                    <Link
+                      href={`/courses/${project.courseSlug}`}
+                      className="text-xs font-bold text-primary hover:text-primary-dark flex items-center gap-1 transition-colors"
+                    >
+                      View Related Course ➔
+                    </Link>
                   </div>
                 </div>
               </article>

@@ -48,9 +48,9 @@ Understanding AI is becoming as fundamental as learning to read and write. Just 
     id: "future-jobs",
     icon: "💼",
     title: "How AI Will Change Future Jobs",
-    content: `The World Economic Forum estimates that AI will create 97 million new jobs by 2025 while transforming existing ones. The jobs of the future will require AI skills across every industry — not just technology. Doctors will use AI for diagnosis, lawyers will use AI for legal research, artists will use AI for creative expression, and teachers will use AI for personalized education.
+    content: `The World Economic Forum's Future of Jobs Report estimates that AI and technology adoption will continue to create tens of millions of new, high-value jobs globally while transforming existing roles. The jobs of the future will require AI skills across every industry — not just technology. Doctors will use AI for diagnosis, lawyers will use AI for legal research, artists will use AI for creative expression, and teachers will use AI for personalized education.
 
-Some of the highest-paying career paths of the future include AI Engineer, Machine Learning Specialist, Data Scientist, AI Product Manager, Prompt Engineer, AI Ethics Specialist, and Computer Vision Engineer. These roles offer competitive salaries ranging from $80,000 to $200,000+ globally.
+Some of the highest-paying career paths include AI Engineer, Machine Learning Specialist, Data Scientist, and AI Product Manager. These roles offer highly competitive salaries globally, with junior positions starting around $80,000 and senior roles exceeding $150,000+ per year, according to compensation platforms like Glassdoor and talent.com. In Pakistan, specialized AI and machine learning skills command premium rates locally and in the global freelancing market.
 
 For Pakistani students, mastering AI opens doors to both local opportunities and the global freelance market. Pakistan's freelance industry is already one of the largest in the world, and AI skills command premium rates. Students who learn AI today are investing in one of the most valuable skill sets of the future.`,
   },

@@ -65,13 +65,6 @@ export function generateLocalBusinessSchema() {
       opens: "09:00",
       closes: "21:00",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "127",
-      bestRating: "5",
-      worstRating: "1",
-    },
   };
 }
 

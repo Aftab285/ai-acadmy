@@ -12,7 +12,7 @@ function parseValue(value: string): { num: number; suffix: string } {
 }
 
 function CountUp({ target, suffix, animate }: { target: number; suffix: string; animate: boolean }) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(target);
 
   useEffect(() => {
     if (!animate) return;
@@ -38,7 +38,7 @@ function CountUp({ target, suffix, animate }: { target: number; suffix: string; 
 
   return (
     <span className="font-outfit text-3xl font-bold text-dark sm:text-4xl lg:text-5xl">
-      {animate ? count : 0}
+      {count}
       {suffix}
     </span>
   );
@@ -67,28 +67,30 @@ export default function StatsCounter() {
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="grid grid-cols-2 gap-8 rounded-2xl bg-white p-8 shadow-xl sm:p-12 lg:grid-cols-4"
-    >
-      {STATS.map((stat, index) => {
-        const { num, suffix } = parseValue(stat.value);
-        return (
-          <div
-            key={index}
-            className={`flex flex-col items-center text-center ${
-              index < STATS.length - 1
-                ? 'lg:border-r lg:border-gray-100'
-                : ''
-            }`}
-          >
-            <CountUp target={num} suffix={suffix} animate={isVisible} />
-            <span className="mt-2 text-sm font-medium text-muted">
-              {stat.label}
-            </span>
-          </div>
-        );
-      })}
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-20">
+      <div
+        ref={containerRef}
+        className="grid grid-cols-2 gap-8 rounded-2xl bg-white p-8 shadow-xl sm:p-12 lg:grid-cols-4"
+      >
+        {STATS.map((stat, index) => {
+          const { num, suffix } = parseValue(stat.value);
+          return (
+            <div
+              key={index}
+              className={`flex flex-col items-center text-center ${
+                index < STATS.length - 1
+                  ? 'lg:border-r lg:border-gray-100'
+                  : ''
+              }`}
+            >
+              <CountUp target={num} suffix={suffix} animate={isVisible} />
+              <span className="mt-2 text-sm font-medium text-muted">
+                {stat.label}
+              </span>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -47,8 +47,8 @@ export default function PrivacyPolicyPage() {
           <div className="prose prose-blue max-w-none text-gray-700 space-y-6">
             <p className="text-lg leading-relaxed">
               At <strong>Pakistan AI Online Academy</strong>, accessible from{" "}
-              <a href="https://pakistanaionlineacademy.com" className="text-primary underline font-medium">
-                https://pakistanaionlineacademy.com
+              <a href="https://www.pakistanaionlineacademy.com" className="text-primary underline font-medium">
+                https://www.pakistanaionlineacademy.com
               </a>
               , one of our main priorities is the privacy of our visitors and students. This Privacy Policy document
               contains types of information that is collected and recorded by Pakistan AI Online Academy and how we

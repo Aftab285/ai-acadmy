@@ -1,7 +1,7 @@
 // Site-wide constants for Pakistan AI Online Academy
 
 export const SITE_NAME = "Pakistan AI Online Academy";
-export const SITE_DOMAIN = "https://pakistanaionlineacademy.com";
+export const SITE_DOMAIN = "https://www.pakistanaionlineacademy.com";
 export const SITE_DESCRIPTION =
   "Pakistan's leading online AI academy offering live classes in Artificial Intelligence, Machine Learning, ChatGPT, and Generative AI for students and beginners across Pakistan.";
 export const SITE_TAGLINE = "Leading the AI Revolution";
@@ -773,6 +773,9 @@ export interface StudentProject {
   category: string;
   studentName: string;
   studentAge: number;
+  courseTaken: string;
+  courseSlug: string;
+  whatLearned: string;
 }
 
 export const STUDENT_PROJECTS: StudentProject[] = [
@@ -785,6 +788,9 @@ export const STUDENT_PROJECTS: StudentProject[] = [
     category: "Chatbot",
     studentName: "Ahmed K.",
     studentAge: 14,
+    courseTaken: "Beginner AI Course",
+    courseSlug: "beginner-ai-course",
+    whatLearned: "Learned natural language processing basics, prompt design, and integrating OpenAI's API using Python.",
   },
   {
     id: 2,
@@ -795,6 +801,9 @@ export const STUDENT_PROJECTS: StudentProject[] = [
     category: "Computer Vision",
     studentName: "Fatima Z.",
     studentAge: 16,
+    courseTaken: "Intermediate AI Course",
+    courseSlug: "intermediate-ai-course",
+    whatLearned: "Learned feature extraction, training Convolutional Neural Networks (CNNs), and processing image datasets.",
   },
   {
     id: 3,
@@ -805,6 +814,9 @@ export const STUDENT_PROJECTS: StudentProject[] = [
     category: "Education",
     studentName: "Hassan M.",
     studentAge: 15,
+    courseTaken: "ChatGPT Course",
+    courseSlug: "chatgpt-course",
+    whatLearned: "Learned systematic prompt chaining, context management, and generating structured study plans.",
   },
   {
     id: 4,
@@ -815,6 +827,9 @@ export const STUDENT_PROJECTS: StudentProject[] = [
     category: "Data Science",
     studentName: "Aisha R.",
     studentAge: 17,
+    courseTaken: "Intermediate AI Course",
+    courseSlug: "intermediate-ai-course",
+    whatLearned: "Learned text tokenization, classifier models, and building custom web dashboards with Streamlit.",
   },
   {
     id: 5,
@@ -825,6 +840,9 @@ export const STUDENT_PROJECTS: StudentProject[] = [
     category: "Creative AI",
     studentName: "Ali S.",
     studentAge: 13,
+    courseTaken: "Generative AI Course",
+    courseSlug: "generative-ai-course",
+    whatLearned: "Learned diffusion models, text-to-image prompting rules, and negative prompt fine-tuning.",
   },
   {
     id: 6,
@@ -835,6 +853,9 @@ export const STUDENT_PROJECTS: StudentProject[] = [
     category: "Data Science",
     studentName: "Sana M.",
     studentAge: 18,
+    courseTaken: "Intermediate AI Course",
+    courseSlug: "intermediate-ai-course",
+    whatLearned: "Learned linear and polynomial regression, cleaning public weather datasets, and building forecasting algorithms.",
   },
   {
     id: 7,
@@ -845,6 +866,9 @@ export const STUDENT_PROJECTS: StudentProject[] = [
     category: "Language",
     studentName: "Omar H.",
     studentAge: 12,
+    courseTaken: "Beginner AI Course",
+    courseSlug: "beginner-ai-course",
+    whatLearned: "Learned working with external translation APIs, JSON response parsing, and designing simple console UIs.",
   },
   {
     id: 8,
@@ -855,5 +879,8 @@ export const STUDENT_PROJECTS: StudentProject[] = [
     category: "Finance",
     studentName: "Zainab A.",
     studentAge: 16,
+    courseTaken: "Python & AI Development Course",
+    courseSlug: "python-ai-development-course",
+    whatLearned: "Learned python files integration, data structures, categorization logic, and rendering tables on a Streamlit interface.",
   },
 ];

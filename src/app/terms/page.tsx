@@ -52,8 +52,8 @@ export default function TermsPage() {
             <p>
               These terms and conditions outline the rules and regulations for the use of Pakistan AI Online Academy&apos;s
               Website and Live Online Courses, located at{" "}
-              <a href="https://pakistanaionlineacademy.com" className="text-primary underline font-medium">
-                https://pakistanaionlineacademy.com
+              <a href="https://www.pakistanaionlineacademy.com" className="text-primary underline font-medium">
+                https://www.pakistanaionlineacademy.com
               </a>
               .
             </p>

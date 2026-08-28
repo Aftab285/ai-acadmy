@@ -104,8 +104,7 @@ export default function AboutPage() {
               opportunities.
             </p>
             <p className="text-dark-light leading-relaxed mb-6">
-              Our founder, an experienced AI professional, decided to bridge this
-              gap by creating an online academy that brings world-class AI education
+              To bridge this gap, we created an online academy that brings world-class AI education
               directly to students&apos; homes. Through live interactive classes, hands-on
               projects, and personalized mentorship, we make AI learning engaging,
               practical, and accessible.
@@ -117,6 +116,23 @@ export default function AboutPage() {
               practical skills, real project experience, and the confidence to
               pursue AI-driven opportunities — both locally and globally.
             </p>
+
+            {/* Founder / Instructor Bio */}
+            <div className="mt-12 bg-white p-8 rounded-3xl border border-gray-100 shadow-sm flex flex-col md:flex-row gap-8 items-center not-prose">
+              <div className="flex-shrink-0 w-24 h-24 rounded-full bg-gradient-to-br from-primary to-primary-light flex items-center justify-center text-white text-3xl font-bold font-outfit shadow-md">
+                A
+              </div>
+              <div>
+                <h3 className="font-outfit font-bold text-xl text-dark mb-1">Meet the Instructor & Coordinator</h3>
+                <p className="text-primary font-medium text-xs mb-4">Aftab | Software Engineer & Lead Instructor</p>
+                <p className="text-muted text-sm leading-relaxed mb-4">
+                  Aftab is an experienced software engineer and AI developer who leads the educational programs at Pakistan AI Online Academy. He designs the visual curriculum roadmaps and runs our live online coding sessions. His experience spans full-stack Python development, machine learning models, database structures, and natural language API integrations.
+                </p>
+                <div className="flex gap-4">
+                  <span className="text-xs text-muted">Focus: Python Programming, Prompt Engineering, API Integration</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

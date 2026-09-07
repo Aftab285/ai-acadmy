@@ -153,7 +153,7 @@ export const post = {
 
     <p>At <strong>Pakistan AI Online Academy</strong>, we teach not just how to use AI tools like ChatGPT, but how to understand, build, and shape the AI technology of tomorrow. Our courses include dedicated modules on prompt engineering, generative AI, and practical AI tool proficiency.</p>
 
-    <p>Ready to go beyond basic ChatGPT usage and develop real AI skills? Contact us on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a> or visit our <a href="/contact/">contact page</a>. Our team will help you find the perfect learning path for your goals and experience level.</p>
+    <p>Ready to go beyond basic ChatGPT usage and develop real AI skills? Contact us on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a> or visit our <a href="/contact/">contact page</a>. Our team will help you find the perfect learning path for your goals and experience level.</p>
 
     <p>The AI revolution is here. Understanding tools like ChatGPT is no longer optional — it is the new baseline. The question is whether you will be a passive user or an informed, skilled practitioner. <strong>Pakistan AI Online Academy</strong> is here to help you become the latter.</p>
   `,

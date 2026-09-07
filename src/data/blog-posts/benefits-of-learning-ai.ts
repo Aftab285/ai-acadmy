@@ -116,6 +116,6 @@ export const post = {
 
     <p><strong>Pakistan AI Online Academy</strong> is here to guide you every step of the way. Our courses are designed specifically for Pakistani learners, with flexible schedules, expert instructors, and a supportive community.</p>
 
-    <p>Ready to take the first step? <a href="/courses/">Explore our courses</a> or <a href="/contact/">contact us</a> to learn more. You can also reach us directly on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a> — we would love to help you start your AI learning journey today.</p>
+    <p>Ready to take the first step? <a href="/courses/">Explore our courses</a> or <a href="/contact/">contact us</a> to learn more. You can also reach us directly on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a> — we would love to help you start your AI learning journey today.</p>
   `
 };

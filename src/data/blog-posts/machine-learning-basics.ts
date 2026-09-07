@@ -185,6 +185,6 @@ export const post = {
       <li>A community of fellow learners to collaborate with</li>
     </ul>
 
-    <p>Ready to start your machine learning journey? <a href="/courses/">Explore our courses</a> and find the perfect starting point. Have questions? <a href="/contact/">Contact us</a> or message us on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a> — we are here to help you every step of the way.</p>
+    <p>Ready to start your machine learning journey? <a href="/courses/">Explore our courses</a> and find the perfect starting point. Have questions? <a href="/contact/">Contact us</a> or message us on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a> — we are here to help you every step of the way.</p>
   `
 };

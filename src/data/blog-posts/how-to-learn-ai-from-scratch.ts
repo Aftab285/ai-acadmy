@@ -181,7 +181,7 @@ export const post = {
     <ul>
       <li>Explore our <a href="/courses/">AI courses</a> and find the one that matches your current level.</li>
       <li>Read our guide on the <a href="/blog/best-ai-course-in-pakistan">best AI course in Pakistan</a> to compare your options.</li>
-      <li>If you have questions, reach out directly. Contact us on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a> — our team responds personally and will help you choose the right starting point.</li>
+      <li>If you have questions, reach out directly. Contact us on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a> — our team responds personally and will help you choose the right starting point.</li>
     </ul>
 
     <p>The journey of a thousand miles begins with a single step. Your AI journey begins today. Let <strong>Pakistan AI Online Academy</strong> be your guide.</p>

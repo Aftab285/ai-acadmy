@@ -7,19 +7,18 @@ export const SITE_DESCRIPTION =
 export const SITE_TAGLINE = "Leading the AI Revolution";
 
 // WhatsApp
-export const WHATSAPP_NUMBER_1 = "03406187831";
-export const WHATSAPP_INTERNATIONAL_1 = "+923406187831";
-export const WHATSAPP_LINK_1 = (message?: string) =>
-  `https://wa.me/923406187831${message ? `?text=${encodeURIComponent(message)}` : ""}`;
-
-export const WHATSAPP_NUMBER_2 = "03496354307";
-export const WHATSAPP_INTERNATIONAL_2 = "+923496354307";
-export const WHATSAPP_LINK_2 = (message?: string) =>
+export const WHATSAPP_NUMBER = "03496354307";
+export const WHATSAPP_INTERNATIONAL = "+923496354307";
+export const WHATSAPP_LINK = (message?: string) =>
   `https://wa.me/923496354307${message ? `?text=${encodeURIComponent(message)}` : ""}`;
 
-export const WHATSAPP_NUMBER = "03406187831 / 03496354307";
-export const WHATSAPP_INTERNATIONAL = "+923406187831 / +923496354307";
-export const WHATSAPP_LINK = WHATSAPP_LINK_1;
+export const WHATSAPP_NUMBER_1 = WHATSAPP_NUMBER;
+export const WHATSAPP_INTERNATIONAL_1 = WHATSAPP_INTERNATIONAL;
+export const WHATSAPP_LINK_1 = WHATSAPP_LINK;
+
+export const WHATSAPP_NUMBER_2 = WHATSAPP_NUMBER;
+export const WHATSAPP_INTERNATIONAL_2 = WHATSAPP_INTERNATIONAL;
+export const WHATSAPP_LINK_2 = WHATSAPP_LINK;
 export const WHATSAPP_DEFAULT_MESSAGE =
   "Hi! I'm interested in learning about AI courses at Pakistan AI Online Academy. Can you share more details?";
 export const WHATSAPP_DEMO_MESSAGE =
@@ -488,12 +487,12 @@ export const FAQ_DATA: FAQItem[] = [
   {
     question: "How can I enroll?",
     answer:
-      "Enrolling is easy! Simply contact us on WhatsApp at 03406187831. Our team will guide you through the enrollment process, help you choose the right course, and schedule your free demo class. We are here to help you start your AI learning journey.",
+      "Enrolling is easy! Simply contact us on WhatsApp at 03496354307. Our team will guide you through the enrollment process, help you choose the right course, and schedule your free demo class. We are here to help you start your AI learning journey.",
   },
   {
     question: "How do I contact you?",
     answer:
-      "You can contact us directly on WhatsApp at 03406187831. WhatsApp is our primary communication channel for inquiries, enrollment, and student support. Tap the WhatsApp button on our website to start a conversation with us instantly.",
+      "You can contact us directly on WhatsApp at 03496354307. WhatsApp is our primary communication channel for inquiries, enrollment, and student support. Tap the WhatsApp button on our website to start a conversation with us instantly.",
   },
 ];
 

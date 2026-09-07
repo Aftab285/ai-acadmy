@@ -193,6 +193,6 @@ export const post = {
 
     <p>Do not wait for the perfect moment — the demand for AI professionals is growing right now, and the sooner you start building your skills, the better positioned you will be to capture these opportunities.</p>
 
-    <p>Ready to take the first step toward your AI career? <a href="/courses/">Browse our courses</a>, <a href="/contact/">get in touch</a>, or reach us on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a>. Our team is ready to help you find the right learning path for your career goals.</p>
+    <p>Ready to take the first step toward your AI career? <a href="/courses/">Browse our courses</a>, <a href="/contact/">get in touch</a>, or reach us on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a>. Our team is ready to help you find the right learning path for your career goals.</p>
   `
 };

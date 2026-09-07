@@ -127,7 +127,7 @@ export const post = {
       <li><strong>What is your budget?</strong> Free resources, affordable courses, or premium programmes?</li>
     </ul>
 
-    <p>If you are unsure, we are here to help. Contact us on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a> and we will recommend the perfect starting point based on your background and goals.</p>
+    <p>If you are unsure, we are here to help. Contact us on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a> and we will recommend the perfect starting point based on your background and goals.</p>
 
     <h2>Success Stories</h2>
 
@@ -142,7 +142,7 @@ export const post = {
     <ul>
       <li><strong>Step 1:</strong> Browse our <a href="/courses/">complete course catalogue</a> and read the detailed descriptions.</li>
       <li><strong>Step 2:</strong> Read our <a href="/blog/how-to-learn-ai-from-scratch">roadmap for learning AI from scratch</a> to understand the learning journey.</li>
-      <li><strong>Step 3:</strong> Reach out to our team on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a> for personalised guidance.</li>
+      <li><strong>Step 3:</strong> Reach out to our team on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a> for personalised guidance.</li>
       <li><strong>Step 4:</strong> Enrol and begin your AI journey today.</li>
     </ul>
 

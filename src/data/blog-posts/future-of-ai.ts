@@ -173,7 +173,7 @@ export const post = {
 
     <p>The students who invest in AI education today will lead tomorrow's innovation. The professionals who upskill now will remain relevant and competitive. The parents who encourage AI learning will give their children an invaluable advantage.</p>
 
-    <p>Do not wait. Start your AI journey today with <strong>Pakistan AI Online Academy</strong>. Explore our <a href="/courses/">courses</a>, read our <a href="/blog/how-to-learn-ai-from-scratch">learning roadmap</a>, or contact us on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a> for personalised guidance.</p>
+    <p>Do not wait. Start your AI journey today with <strong>Pakistan AI Online Academy</strong>. Explore our <a href="/courses/">courses</a>, read our <a href="/blog/how-to-learn-ai-from-scratch">learning roadmap</a>, or contact us on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a> for personalised guidance.</p>
 
     <p>The future belongs to those who prepare for it. Let us help you get ready.</p>
   `,

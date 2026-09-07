@@ -136,7 +136,7 @@ export const post = {
     <ul>
       <li><strong>Step 1:</strong> Have a conversation with your child about AI. Ask what they know, what interests them, and what they would like to build.</li>
       <li><strong>Step 2:</strong> Explore our <a href="/courses/">course catalogue</a> together. We offer programmes for different age groups and skill levels.</li>
-      <li><strong>Step 3:</strong> Contact us for personalised advice. Every child is different, and we can help you choose the right starting point. Reach us on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a>.</li>
+      <li><strong>Step 3:</strong> Contact us for personalised advice. Every child is different, and we can help you choose the right starting point. Reach us on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a>.</li>
       <li><strong>Step 4:</strong> Enrol your child and begin the journey. Our team provides ongoing support to both students and parents.</li>
     </ul>
 
@@ -148,6 +148,6 @@ export const post = {
 
     <p>The question is not whether kids can learn AI — they absolutely can. The question is whether you will give them the opportunity to start. The students who begin today will be the leaders, creators, and problem-solvers of tomorrow's Pakistan.</p>
 
-    <p><strong>Pakistan AI Online Academy</strong> is here to make that journey possible for every Pakistani child. <a href="/courses/">Explore our courses</a>, read more about <a href="/blog/ai-skills-every-student-should-learn">the skills your child should develop</a>, or reach out on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a>. We would love to welcome your child into our learning community.</p>
+    <p><strong>Pakistan AI Online Academy</strong> is here to make that journey possible for every Pakistani child. <a href="/courses/">Explore our courses</a>, read more about <a href="/blog/ai-skills-every-student-should-learn">the skills your child should develop</a>, or reach out on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a>. We would love to welcome your child into our learning community.</p>
   `,
 };

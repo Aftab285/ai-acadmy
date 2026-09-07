@@ -127,7 +127,7 @@ export const post = {
       <li>Affordable pricing designed for Pakistani families</li>
     </ul>
 
-    <p>Have questions about which skills to prioritise or which course to start with? Contact us on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a> — our team provides personalised guidance to every student.</p>
+    <p>Have questions about which skills to prioritise or which course to start with? Contact us on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a> — our team provides personalised guidance to every student.</p>
 
     <h2>The Bottom Line</h2>
 

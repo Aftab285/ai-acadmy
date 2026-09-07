@@ -145,7 +145,7 @@ export const post = {
       <li><strong>Step 5:</strong> Join a community — connect with fellow learners, ask questions, and stay motivated.</li>
     </ul>
 
-    <p>If you are not sure where to begin or which course is right for you, we are happy to help. Contact us on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a> and our team will guide you personally.</p>
+    <p>If you are not sure where to begin or which course is right for you, we are happy to help. Contact us on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a> and our team will guide you personally.</p>
 
     <h2>Conclusion</h2>
 

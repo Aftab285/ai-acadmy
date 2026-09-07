@@ -235,6 +235,6 @@ export const post = {
 
     <p>Our curriculum includes hands-on experience with all major AI tools, combined with deep understanding of the concepts that power them. Whether you are a beginner or looking to advance your skills, we have the right course for you.</p>
 
-    <p>Ready to master AI tools and build your future? <a href="/courses/">Explore our courses</a>, <a href="/contact/">contact us for guidance</a>, or reach out on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a>. Let us help you become an AI-powered student and future professional.</p>
+    <p>Ready to master AI tools and build your future? <a href="/courses/">Explore our courses</a>, <a href="/contact/">contact us for guidance</a>, or reach out on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a>. Let us help you become an AI-powered student and future professional.</p>
   `
 };

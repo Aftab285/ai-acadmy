@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/metadata";
 import { generateBreadcrumbSchema } from "@/lib/schema";
-import { WHATSAPP_LINK_1, WHATSAPP_LINK_2, WHATSAPP_DEFAULT_MESSAGE, DEMO_VIDEO_URL } from "@/lib/constants";
+import { WHATSAPP_LINK, WHATSAPP_DEFAULT_MESSAGE, DEMO_VIDEO_URL } from "@/lib/constants";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import CTAButton from "@/components/ui/CTAButton";
 import FAQAccordion from "@/components/ui/FAQAccordion";
@@ -69,12 +69,12 @@ const FAQ_DATA_UR = [
   {
     question: "میں کورس میں کیسے داخلہ لے سکتا ہوں؟",
     answer:
-      "داخلہ لینا بہت آسان ہے! بس ہم سے واٹس ایپ پر 03406187831 پر رابطہ کریں۔ ہماری ٹیم داخلے کے عمل میں آپ کی رہنمائی کرے گی، صحیح کورس کے انتخاب میں آپ کی مدد کرے گی، اور آپ کی مفت ڈیمو کلاس کا وقت طے کرے گی۔ ہم آپ کے AI سیکھنے کا سفر شروع کرنے کے لیے حاضر ہیں۔",
+      "داخلہ لینا بہت آسان ہے! بس ہم سے واٹس ایپ پر 03496354307 پر رابطہ کریں۔ ہماری ٹیم داخلے کے عمل میں آپ کی رہنمائی کرے گی، صحیح کورس کے انتخاب میں آپ کی مدد کرے گی، اور آپ کی مفت ڈیمو کلاس کا وقت طے کرے گی۔ ہم آپ کے AI سیکھنے کا سفر شروع کرنے کے لیے حاضر ہیں۔",
   },
   {
     question: "میں آپ سے کیسے رابطہ کر سکتا ہوں؟",
     answer:
-      "آپ براہ راست واٹس ایپ پر 03406187831 پر رابطہ کر سکتے ہیں۔ واٹس ایپ معلومات، داخلے، اور طلبہ کی رہنمائی کے لیے ہمارا بنیادی رابطہ چینل ہے۔ ہم سے فوری بات چیت شروع کرنے کے لیے ہماری ویب سائٹ پر موجود واٹس ایپ بٹن پر ٹیپ کریں۔",
+      "آپ براہ راست واٹس ایپ پر 03496354307 پر رابطہ کر سکتے ہیں۔ واٹس ایپ معلومات، داخلے، اور طلبہ کی رہنمائی کے لیے ہمارا بنیادی رابطہ چینل ہے۔ ہم سے فوری بات چیت شروع کرنے کے لیے ہماری ویب سائٹ پر موجود واٹس ایپ بٹن پر ٹیپ کریں۔",
   },
 ];
 
@@ -127,32 +127,18 @@ export default function ContactPage() {
               واٹس ایپ ہمارا بنیادی رابطہ چینل ہے۔ ہم سے فوری بات چیت شروع کرنے کے لیے نیچے دیے گئے بٹن پر ٹیپ کریں۔
             </p>
 
-            {/* WhatsApp Support Cards */}
-            <div className="mb-10 space-y-4 max-w-md mx-auto">
-              <div className="bg-white/80 p-5 rounded-2xl border border-green-200/50 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            {/* WhatsApp Support Card */}
+            <div className="mb-10 max-w-md mx-auto">
+              <div className="bg-white/80 p-6 rounded-2xl border border-green-200/50 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
                 <CTAButton
                   variant="whatsapp"
-                  size="sm"
-                  href={WHATSAPP_LINK_1(WHATSAPP_DEFAULT_MESSAGE)}
+                  size="md"
+                  href={WHATSAPP_LINK(WHATSAPP_DEFAULT_MESSAGE)}
                 >
-                  سپورٹ 1 سے بات کریں
+                  واٹس ایپ پر رابطہ کریں
                 </CTAButton>
                 <div className="text-right">
-                  <p className="text-[10px] text-muted font-bold tracking-wider uppercase">واٹس ایپ سپورٹ 1</p>
-                  <p className="font-outfit text-2xl font-bold text-[#25D366] mt-0.5">0340 6187831</p>
-                </div>
-              </div>
-
-              <div className="bg-white/80 p-5 rounded-2xl border border-green-200/50 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-                <CTAButton
-                  variant="whatsapp"
-                  size="sm"
-                  href={WHATSAPP_LINK_2(WHATSAPP_DEFAULT_MESSAGE)}
-                >
-                  سپورٹ 2 سے بات کریں
-                </CTAButton>
-                <div className="text-right">
-                  <p className="text-[10px] text-muted font-bold tracking-wider uppercase">واٹس ایپ سپورٹ 2</p>
+                  <p className="text-[10px] text-muted font-bold tracking-wider uppercase">واٹس ایپ سپورٹ</p>
                   <p className="font-outfit text-2xl font-bold text-[#25D366] mt-0.5">0349 6354307</p>
                 </div>
               </div>

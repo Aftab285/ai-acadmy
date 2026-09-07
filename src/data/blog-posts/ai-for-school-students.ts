@@ -147,7 +147,7 @@ export const post = {
 
     <p>Do not wait for the school system to catch up. Take the initiative now.</p>
 
-    <p>Have questions? Want personalised advice on which course is right for your child? Contact us on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a> — we would love to help your child take their first step into the world of artificial intelligence.</p>
+    <p>Have questions? Want personalised advice on which course is right for your child? Contact us on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a> — we would love to help your child take their first step into the world of artificial intelligence.</p>
 
     <p>Also read: <a href="/blog/ai-skills-every-student-should-learn">Top 10 AI Skills Every Student Should Learn in 2025</a> and <a href="/blog/what-is-artificial-intelligence">What is Artificial Intelligence? A Complete Guide</a>.</p>
   `,

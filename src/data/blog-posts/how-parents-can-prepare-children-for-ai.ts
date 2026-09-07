@@ -164,6 +164,6 @@ export const post = {
 
     <p>Our team is always available to discuss your child's learning needs and recommend the best starting point. Whether your child is a curious beginner or a budding programmer, we have a path for them.</p>
 
-    <p>Ready to invest in your child's future? <a href="/courses/">Explore our courses</a>, <a href="/contact/">contact us</a>, or reach out on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a>. Together, we can prepare your child to thrive in an AI-powered world.</p>
+    <p>Ready to invest in your child's future? <a href="/courses/">Explore our courses</a>, <a href="/contact/">contact us</a>, or reach out on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a>. Together, we can prepare your child to thrive in an AI-powered world.</p>
   `
 };

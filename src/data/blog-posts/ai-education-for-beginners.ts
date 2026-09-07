@@ -208,6 +208,6 @@ export const post = {
       <li>Affordable pricing designed for Pakistani students</li>
     </ul>
 
-    <p>Do not let another day pass wondering about AI — start your journey today. <a href="/courses/">Explore our courses</a>, <a href="/contact/">contact us with your questions</a>, or message us directly on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a>. We are here to guide you every step of the way.</p>
+    <p>Do not let another day pass wondering about AI — start your journey today. <a href="/courses/">Explore our courses</a>, <a href="/contact/">contact us with your questions</a>, or message us directly on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a>. We are here to guide you every step of the way.</p>
   `
 };

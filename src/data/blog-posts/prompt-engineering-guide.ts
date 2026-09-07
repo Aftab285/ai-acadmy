@@ -161,6 +161,6 @@ export const post = {
 
     <p>Whether you are interested in prompt engineering as a career, a productivity tool, or a gateway to deeper AI understanding, our courses provide the structured learning experience you need.</p>
 
-    <p>Ready to master the art of AI communication? <a href="/courses/">Explore our courses</a>, <a href="/contact/">contact us</a>, or reach out on WhatsApp at <a href="https://wa.me/923406187831">03406187831</a>. Let us help you become fluent in the language of AI.</p>
+    <p>Ready to master the art of AI communication? <a href="/courses/">Explore our courses</a>, <a href="/contact/">contact us</a>, or reach out on WhatsApp at <a href="https://wa.me/923496354307">03496354307</a>. Let us help you become fluent in the language of AI.</p>
   `
 };

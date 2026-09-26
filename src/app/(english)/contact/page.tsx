@@ -77,7 +77,7 @@ export default function ContactPage() {
               <div className="bg-white/80 p-6 rounded-2xl border border-green-200/50 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
                 <div>
                   <p className="text-[10px] text-muted font-bold tracking-wider uppercase">WhatsApp Support</p>
-                  <p className="font-outfit text-2xl font-bold text-[#25D366] mt-0.5">0349 6354307</p>
+                  <p className="font-outfit text-2xl font-bold text-[#25D366] mt-0.5">0340 6187831</p>
                 </div>
                 <CTAButton
                   variant="whatsapp"
